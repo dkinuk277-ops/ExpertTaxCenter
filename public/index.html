@@ -475,7 +475,7 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
         </div>
         <div class="card tier featured"><span class="ribbon">Most popular</span>
           <h3>Small Business</h3><p class="muted">Shops, traders, professionals, startups</p>
-          <ul><li>Business ITR (ITR-3 / 4 / 5)</li><li>GST returns &amp; registration</li><li>Bookkeeping support</li><li>Advance tax reminders</li><li>Notice handling</li></ul>
+          <ul><li>Business ITR (ITR-3 / 4, ITR-5 for firms)</li><li>GST returns &amp; registration</li><li>Bookkeeping support</li><li>Advance tax reminders</li><li>Notice handling</li></ul>
         </div>
         <div class="card tier">
           <h3>Mid-size Business</h3><p class="muted">Firms, LLPs, private companies</p>
@@ -699,11 +699,15 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
           <div class="big">✅</div>
           <h3>Thank you! Your enquiry has been received.</h3>
           <p class="muted">Ravi will contact you within one working day.</p>
-          <div class="btn-row" style="justify-content:center"><a class="btn btn-ghost" id="waFollow" target="_blank" rel="noopener">Also send on WhatsApp</a></div>
+          <div class="btn-row" style="justify-content:center"><a class="btn btn-primary" id="waFollow" target="_blank" rel="noopener" style="background:linear-gradient(180deg,#3ee07f,#1fa855);color:#04210f">💬 Also send to Ravi on WhatsApp</a></div>
         </div>
       </div>
 
       <div>
+        <div class="card" style="margin-bottom:18px">
+          <h3>Call or WhatsApp</h3>
+          <p><a href="tel:+919686776664"><b>+91 96867 76664</b></a><br><a href="https://wa.me/919686776664" target="_blank" rel="noopener">Chat on WhatsApp →</a><br><span class="muted">hellocompsilon@gmail.com</span></p>
+        </div>
         <div class="card" style="margin-bottom:18px">
           <h3>Office hours</h3>
           <p>Mon – Sat: 10:00 am – 7:00 pm<br>Sunday: by appointment<br><span class="muted">Extended hours during July filing season</span></p>
@@ -735,9 +739,9 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
         <div class="pill-row"><span class="tag">Income Tax</span><span class="tag">GST</span><span class="tag">TDS</span><span class="tag">Tax Planning</span><span class="tag">Savings Guidance</span></div>
       </div>
       <ul class="contact-list">
-        <li><span class="ci">📞</span><a href="tel:+910000000000" id="pPhone">+91 00000 00000</a></li>
-        <li><span class="ci">✉️</span><a href="mailto:ravi@experttaxcenter.com" id="pEmail">ravi@experttaxcenter.com</a></li>
-        <li><span class="ci">💬</span><a href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><span class="ci">📞</span><a href="tel:+919686776664" id="pPhone">+91 96867 76664</a></li>
+        <li><span class="ci">✉️</span><a href="mailto:hellocompsilon@gmail.com" id="pEmail">hellocompsilon@gmail.com</a></li>
+        <li><span class="ci">💬</span><a href="https://wa.me/919686776664" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><span class="ci">📍</span>Gubbi, Karnataka</li>
       </ul>
     </div>
@@ -758,13 +762,13 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<a class="wa" href="https://wa.me/919686776664" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
 <script>
 /* ============ CONFIG — replace later ============ */
 const CONFIG = {
-  whatsapp: "910000000000",            // country code + number, no +
-  email: "ravi@experttaxcenter.com",
+  whatsapp: "919686776664",            // country code + number, no +
+  email: "hellocompsilon@gmail.com",
   formEndpoint: location.protocol.startsWith("http") ? "/api/enquiry" : ""   // Cloudflare Pages Function (Resend). Empty on local preview
 };
 
@@ -1000,9 +1004,9 @@ form.addEventListener('submit',async e=>{
     }
   }catch(err){btn.disabled=false;btn.textContent='Submit enquiry';btn.insertAdjacentHTML('afterend','<p class="err" style="display:block;margin-top:10px">Sorry, '+(err.message&&err.message!=='send failed'?err.message:'something went wrong')+'. Please try WhatsApp or call instead.</p>');return;}
 
-  const txt=`Hello Ravi, I'm ${data.name} from ${data.city} (${data.client_type}). Service: ${data.service}. ${data.message}`;
+  const txt=`Hello Ravi, I'm ${data.name} from ${data.city} (${data.client_type}). Mobile: ${data.phone}. Service: ${data.service}. ${data.message}`;
   $('waFollow').href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(txt)}`;
-  form.style.display='none';$('enqSuccess').classList.add('show');
+  form.style.display='none';$('enqSuccess').classList.add('show');$('enqSuccess').scrollIntoView({behavior:'smooth',block:'center'});
 });
 form.querySelectorAll('input,select,textarea').forEach(el=>el.addEventListener('input',()=>el.closest('.field')?.classList.remove('bad')));
 
