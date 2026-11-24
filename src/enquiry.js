@@ -35,7 +35,7 @@ function ackEmailHtml(name, service, site) {
     <tr><td style="padding:26px;color:#1b2236;font-size:15px;line-height:1.6">
       <p style="margin:0 0 14px">Hi ${esc(name)},</p>
       <p style="margin:0 0 14px">Thank you for your submission. We have received your details safely and securely.</p>
-      <p style="margin:0 0 14px">Our tax expert, <b>Ravi Kumar</b>, will get in touch with you shortly${service ? ` about <b>${esc(service)}</b>` : ''}.</p>
+      <p style="margin:0 0 14px">One of our tax experts will get in touch with you shortly${service ? ` about <b>${esc(service)}</b>` : ''}.</p>
       <p style="margin:22px 0 6px;font-weight:bold;color:#0f2160">In the meantime, explore our website</p>
       <table role="presentation" width="100%">
         ${link('itr', 'Which ITR form should you file?', 'ITR-1 to ITR-7 explained, plus a quick form finder')}

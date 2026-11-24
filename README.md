@@ -1,6 +1,6 @@
 # experttaxcenter.com
 
-Website for Expert Tax Center (Ravi Kumar) — income tax, GST and financial guidance, India.
+Website for Expert Tax Center — income tax, GST and financial guidance, India.
 
 - Static site in `public/` (`index.html`, single page, tabbed)
 - `src/worker.js` serves the site and handles `POST /api/enquiry` (sends enquiries via Resend, `src/enquiry.js`)
