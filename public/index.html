@@ -384,6 +384,19 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
 .help-tags span{font-size:.86rem;font-weight:700;padding:7px 13px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff}
 .help-cta{display:flex;flex-direction:column;gap:10px;align-items:flex-start;flex:0 1 300px}
 .help-cta b{color:#fff;font-size:.95rem}
+
+.offer-btns{display:flex;flex-wrap:wrap;gap:10px}
+.offerA{margin-top:40px;border-radius:22px;padding:26px 30px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;
+ background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 50%),linear-gradient(120deg,#ffe08a,#e0a92c);color:#1e1503;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 18px 44px rgba(240,190,70,.28)}
+.offerA .gift{font-size:2.6rem;width:72px;height:72px;border-radius:20px;display:grid;place-items:center;background:rgba(255,255,255,.45)}
+.offerA h3{font-family:'Fraunces',serif;font-size:1.55rem;color:#1e1503;margin:0 0 4px}
+.offerA p{margin:0;color:#3d2c05;font-weight:600}
+.offerA .btn-dark{background:linear-gradient(180deg,#1f45ab,#0f2160);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 20px rgba(15,33,96,.35)}
+.offerA .btn-line{border:2px solid #1e1503;color:#1e1503;background:transparent}
+@media(max-width:860px){.offerA{grid-template-columns:1fr;text-align:left}}
+
+.ticker-foot{border-bottom:0;border-top:1px solid rgba(0,0,0,.15)}
 </style>
 </head>
 <body>
@@ -419,7 +432,7 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
         <div class="lockup"><svg class="emblem" width="64" height="64" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="egL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--em-a)"/><stop offset="1" style="stop-color:var(--em-b)"/></linearGradient><linearGradient id="egLh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><path d="M24 2.5 42.5 8.6V23c0 11.2-7.9 18.6-18.5 22.5C13.4 41.6 5.5 34.2 5.5 23V8.6Z" fill="url(#egL)"/><path d="M24 2.5 42.5 8.6V23c0 1-.1 2-.2 3H5.7C5.6 25 5.5 24 5.5 23V8.6Z" fill="url(#egLh)"/><text x="24" y="25.5" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="19" style="fill:var(--em-ink)">₹</text><polyline points="14,36 20,31.5 25,34 34,27" fill="none" style="stroke:var(--em-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="30,27 34,27 34,31" fill="none" style="stroke:var(--em-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div><div class="wordmark">Expert Tax <span>Center</span></div><div class="brandtag">Tax &amp; Finance Advisory · India</div></div>
         </div>
-        <h1>Smart tax filing.<br><span class="grad-text">Steady wealth building.</span></h1>
+        <h1>Your taxes, done right.<br><span class="grad-text" style="display:inline-block;font-size:.5em;line-height:1.3;margin-top:10px">Every deduction claimed. Every deadline met.</span></h1>
         <p class="lead" style="margin-top:16px">Trusted income tax, GST and savings advice for individuals, families and growing businesses across India. File correctly, pay only what you owe, and put your savings to work.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="#enquiry" data-tab="enquiry">Book a consultation →</a>
@@ -438,6 +451,12 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
           <a class="ptile" href="#planner" data-tab="planner"><i>📈</i><b>Grow savings</b><small>PPF, ELSS, MF &amp; more</small></a>
         </div>
       </div>
+    </div>
+
+    <div class="offerA">
+      <div class="gift">🎁</div>
+      <div><h3>File your tax return with Expert Tax Center</h3><p>…and get a <u>FREE</u> expert consultation on savings, investments and your financial future.</p></div>
+      <div class="offer-btns"><a class="btn btn-dark" href="#enquiry" data-tab="enquiry">File my ITR →</a><a class="btn btn-line" href="#planner" data-tab="planner">See investment ideas</a></div>
     </div>
 
     <div class="stats">
@@ -850,6 +869,10 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
     </div>
   </div>
 </footer>
+<div class="ticker ticker-foot" aria-label="Expert Tax Center highlights">
+  <div class="ticker-track"><ul><li>Make every rupee work harder.</li><li>Grow your wealth. Pay less tax. Sleep easy.</li><li>Smart money moves for every stage of life.</li><li>From your first salary to a secure retirement.</li><li>Secure today. Prosper tomorrow.</li><li>Safe savings, smart investments, less tax.</li><li>Save smart. Invest right. Retire rich.</li><li>Plan it right. Watch it grow.</li><li>Wealth that grows with you.</li></ul><ul aria-hidden="true"><li>Make every rupee work harder.</li><li>Grow your wealth. Pay less tax. Sleep easy.</li><li>Smart money moves for every stage of life.</li><li>From your first salary to a secure retirement.</li><li>Secure today. Prosper tomorrow.</li><li>Safe savings, smart investments, less tax.</li><li>Save smart. Invest right. Retire rich.</li><li>Plan it right. Watch it grow.</li><li>Wealth that grows with you.</li></ul></div>
+</div>
+
 
 <a class="wa" href="https://wa.me/918073379821" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
