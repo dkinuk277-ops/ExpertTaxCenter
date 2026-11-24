@@ -77,9 +77,8 @@ export async function handleEnquiry(request, env, ctx) {
   const SITE = (env.SITE_URL || 'https://www.experttaxcenter.com').replace(/\/$/, '');
 
   const fields = [
-    ['Name', name], ['Mobile', phone], ['Email', email || '—'], ['City', d.city],
+    ['Name', name], ['Mobile', phone], ['Email', email || '—'],
     ['Client type', d.client_type], ['Service', d.service], ['Income / turnover', d.income || 'Not given'],
-    ['Preferred contact', d.contact_pref],
   ];
   const rows = fields.map(([k, v]) => `<tr><td style="padding:6px 12px;color:#555">${esc(k)}</td><td style="padding:6px 12px"><b>${esc(v)}</b></td></tr>`).join('');
   const html = `<div style="font-family:Arial,sans-serif;font-size:14px">

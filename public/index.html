@@ -676,19 +676,14 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
           </div>
           <div class="row">
             <div class="field"><label for="f_email">Email <span class="muted" style="font-weight:500">(for your confirmation)</span></label><input id="f_email" name="email" type="email" autocomplete="email"><div class="err">Enter a valid email</div></div>
-            <div class="field"><label for="f_city">City / Town *</label><input id="f_city" name="city"><div class="err">Please enter your city</div></div>
+            <div class="field"><label for="f_income">Approx. annual income / turnover</label>
+              <select id="f_income" name="income"><option value="">Prefer not to say</option><option>Below ₹5 lakh</option><option>₹5 – 12 lakh</option><option>₹12 – 25 lakh</option><option>₹25 – 50 lakh</option><option>₹50 lakh – 2 crore</option><option>Above ₹2 crore</option></select></div>
           </div>
           <div class="row">
             <div class="field"><label for="f_type">I am a *</label>
               <select id="f_type" name="client_type"><option value="">Select</option><option>Salaried individual</option><option>Pensioner / Senior citizen</option><option>Freelancer / Professional</option><option>Small business / Shop</option><option>Mid-size business / Firm / Company</option><option>NRI</option><option>Other</option></select><div class="err">Please choose one</div></div>
             <div class="field"><label for="f_service">Service needed *</label>
               <select id="f_service" name="service"><option value="">Select</option><option>ITR filing</option><option>Tax planning</option><option>Income tax notice</option><option>GST registration / returns</option><option>TDS returns</option><option>Capital gains</option><option>Bookkeeping</option><option>Investment / financial guidance</option><option>Other</option></select><div class="err">Please choose a service</div></div>
-          </div>
-          <div class="row">
-            <div class="field"><label for="f_income">Approx. annual income / turnover</label>
-              <select id="f_income" name="income"><option value="">Prefer not to say</option><option>Below ₹5 lakh</option><option>₹5 – 12 lakh</option><option>₹12 – 25 lakh</option><option>₹25 – 50 lakh</option><option>₹50 lakh – 2 crore</option><option>Above ₹2 crore</option></select></div>
-            <div class="field"><label for="f_contact">Preferred contact</label>
-              <select id="f_contact" name="contact_pref"><option>Phone call</option><option>WhatsApp</option><option>Email</option><option>In-person meeting</option></select></div>
           </div>
           <div class="field"><label for="f_msg">Your query *</label><textarea id="f_msg" name="message" rows="4" placeholder="E.g. I have salary and some mutual fund gains, need help filing my return"></textarea><div class="err">Please describe your query briefly</div></div>
           <div class="field"><label class="check"><input type="checkbox" id="f_consent"> I agree to be contacted about my enquiry and for my details to be used only for this purpose, in line with India's Digital Personal Data Protection Act.</label><div class="err">Please give consent so we can contact you</div></div>
@@ -978,7 +973,6 @@ const rules={
   f_name:v=>v.trim().length>1,
   f_phone:v=>/^(\+?91[\s-]?)?[6-9]\d{9}$/.test(v.replace(/\s/g,'')),
   f_email:v=>!v||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
-  f_city:v=>v.trim().length>1,
   f_type:v=>!!v, f_service:v=>!!v,
   f_msg:v=>v.trim().length>4
 };
