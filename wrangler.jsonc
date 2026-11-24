@@ -10,7 +10,7 @@
   "observability": { "enabled": true },
   // Plain settings live here so deploys never wipe them. Secret (RESEND_API_KEY) stay in the Cloudflare dashboard.
   "vars": {
-    "TO_EMAIL": "hellocompsilon@gmail.com",
+    "TO_EMAIL": "hellocompsilon@gmail.com,experttaxcenter@gmail.com",
     "FROM_EMAIL": "Expert Tax Center <enquiry@experttaxcenter.com>",
     "SITE_URL": "https://www.experttaxcenter.com"
   },
