@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sapphire">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#0a1430">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expert Tax Center | ITR Filing, GST & Financial Advisory — Ravi Kumar</title>
+<link rel="canonical" href="https://experttaxcenter.com/">
+<meta name="description" content="Income tax filing, ITR guidance, GST and tax planning for individuals, small and mid-size businesses across India. Plus a free financial planner for savings and investment ideas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14241f; --ink-2:#3d4f49; --muted:#6b7c76;
+  --bg:#fbf8f2; --line:#e7e1d4;
+  --green:#0f5c4a; --green-2:#127a61; --green-soft:#e3f1ec;
+  --gold:#e09a1a; --gold-soft:#fdf1da;
+  --red:#b4442f;
+  --card:#ffffff; --header:rgba(251,248,242,.94); --foot:#14241f; --gold-ink:#8a5a06; --note-ink:#6b4a0a; --gold-line:#f1d79f;
+  --r:14px; --shadow:0 1px 2px rgba(20,36,31,.06),0 8px 24px rgba(20,36,31,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.2;color:var(--ink)}
+h1{font-size:clamp(2rem,4.5vw,3.2rem)}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.6rem}
+h3{font-size:1.2rem;margin-bottom:.4rem}
+a{color:var(--green-2)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-2);margin-bottom:.6rem}
+.lead{font-size:1.1rem;color:var(--ink-2);max-width:680px}
+.muted{color:var(--muted)}
+section.page{display:none;padding:56px 0 72px;animation:fade .35s ease}
+section.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:var(--header);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand-mark{width:38px;height:38px;border-radius:10px;background:var(--green);color:#fff;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:700;font-size:1.05rem;white-space:nowrap;letter-spacing:-.02em}
+.brand-mark span{color:var(--gold)}
+.brand b{color:var(--ink);font-size:1.15rem;display:block;font-size:1rem;line-height:1.1}
+.brand small{font-size:.72rem;color:var(--muted)}
+.tabs{display:flex;gap:2px;list-style:none}
+.tabs a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink-2);font-weight:600;font-size:.9rem;white-space:nowrap}
+.tabs a:hover{background:var(--green-soft);color:var(--green)}
+.tabs a.active{background:var(--green);color:#fff}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:1.1rem;cursor:pointer}
+@media(max-width:980px){
+  .menu-btn{display:block}
+  .tabs{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px 16px}
+  .tabs.open{display:flex}
+}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-2)}
+.btn-gold{background:var(--gold);color:#1d1404}
+.btn-ghost{border-color:var(--green);color:var(--green);background:transparent}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.hero-card{background:var(--green);color:#fff;border-radius:20px;padding:28px;position:relative;overflow:hidden}
+.hero-card::after{content:"₹";position:absolute;right:-10px;bottom:-60px;font-family:'Fraunces',serif;font-size:15rem;color:rgba(255,255,255,.06);line-height:1}
+.hero-card h3{color:#fff}
+.hero-card ul{list-style:none;margin-top:14px}
+.hero-card li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;gap:10px}
+.hero-card li:last-child{border:0}
+.tick{color:var(--gold);font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.stat b{font-family:'Fraunces',serif;font-size:1.35rem;color:var(--green);line-height:1.25;display:block}
+.stat span{display:block;font-size:.85rem;color:var(--muted)}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Grids & cards */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}
+.card p{color:var(--ink-2);font-size:.95rem}
+.icon{width:44px;height:44px;border-radius:12px;background:var(--green-soft);display:grid;place-items:center;font-size:1.35rem;margin-bottom:12px}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--gold-soft);color:var(--gold-ink);margin:2px 4px 2px 0}
+.section-head{margin-bottom:28px}
+.block{margin-top:56px}
+.banner{background:var(--gold-soft);border:1px solid var(--gold-line);border-radius:var(--r);padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:48px}
+.banner h3{margin:0}
+
+/* Tiers */
+.tier{position:relative}
+.tier.featured{border:2px solid var(--green)}
+.tier .ribbon{position:absolute;top:-12px;right:18px;background:var(--green);color:#fff;font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:99px}
+.tier ul{list-style:none;margin:14px 0 0}
+.tier li{padding:6px 0;font-size:.93rem;color:var(--ink-2);display:flex;gap:8px}
+.tier li::before{content:"✓";color:var(--green-2);font-weight:700}
+
+/* ITR table */
+.table-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--line);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:.93rem}
+th,td{padding:14px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--green);color:#fff;font-weight:600;font-size:.85rem;letter-spacing:.02em}
+tr:last-child td{border-bottom:0}
+td b{color:var(--green)}
+.itr-finder{margin-top:36px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.chip{padding:9px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);cursor:pointer;font-weight:600;font-size:.88rem;font-family:inherit;color:var(--ink-2)}
+.chip.on{background:var(--green);border-color:var(--green);color:#fff}
+.result{margin-top:14px;padding:16px 18px;border-radius:12px;background:var(--green-soft);border-left:4px solid var(--green);display:none}
+.result.show{display:block}
+
+/* Steps */
+.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--gold);color:#1d1404;font-weight:700;margin-bottom:10px}
+
+/* Forms */
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){form .row{grid-template-columns:1fr}}
+label{display:block;font-weight:600;font-size:.88rem;margin-bottom:6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;background:var(--card);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green-2);box-shadow:0 0 0 3px var(--green-soft)}
+.field{margin-bottom:16px}
+.err{color:var(--red);font-size:.8rem;margin-top:4px;display:none}
+.field.bad .err{display:block}
+.field.bad input,.field.bad select,.field.bad textarea{border-color:var(--red)}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.85rem;color:var(--ink-2)}
+.check input{width:auto;margin-top:4px}
+.enq-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:28px}
+@media(max-width:860px){.enq-layout{grid-template-columns:1fr}}
+.success{display:none;text-align:center;padding:40px 20px}
+.success.show{display:block}
+.success .big{font-size:3rem}
+
+/* Planner */
+.planner{max-width:760px;margin:0 auto}
+.progress{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:20px 0 8px}
+.progress div{height:100%;background:linear-gradient(90deg,var(--green),var(--green-2));width:0;transition:width .3s}
+.q-meta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);margin-bottom:18px}
+.q-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow)}
+.q-card h3{font-size:1.4rem;margin-bottom:6px}
+.opts{display:grid;gap:10px;margin-top:20px}
+.opt{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;background:var(--card);font:inherit;text-align:left;color:var(--ink);font-weight:500;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--green-2)}
+.opt.on{border-color:var(--green);background:var(--green-soft)}
+.opt .dot{width:18px;height:18px;border-radius:50%;border:2px solid var(--line);flex:none}
+.opt.on .dot{border-color:var(--green);background:var(--green);box-shadow:inset 0 0 0 3px #fff}
+.q-nav{display:flex;justify-content:space-between;margin-top:22px}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.summary-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+@media(max-width:700px){.summary-bar{grid-template-columns:1fr 1fr}}
+.summary-bar .stat b{font-size:1.25rem}
+.rec{border-left:5px solid var(--green);margin-bottom:16px}
+.rec:nth-child(2){border-left-color:var(--gold)}
+.rec:nth-child(3){border-left-color:#5b7fa8}
+.rec-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.rec-rank{font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.alloc{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--green);text-align:right}
+.alloc small{display:block;font-family:'Plus Jakarta Sans';font-size:.75rem;color:var(--muted)}
+.rec ul{margin:10px 0 0 18px;color:var(--ink-2);font-size:.93rem}
+.pill-row{margin-top:10px}
+.note{background:var(--gold-soft);border-radius:12px;padding:14px 16px;font-size:.85rem;color:var(--note-ink);margin-top:18px}
+.warn{background:#fbe9e5;color:#7d2c1d}
+
+/* Investment table */
+.risk{font-weight:700;font-size:.78rem;padding:3px 9px;border-radius:99px}
+.risk.low{background:var(--green-soft);color:var(--green)}
+.risk.med{background:var(--gold-soft);color:var(--gold-ink)}
+.risk.high{background:#fbe9e5;color:var(--red)}
+
+/* Profile */
+.profile{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+.avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green-2));color:#fff;display:grid;place-items:center;font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;border:4px solid var(--gold-soft)}
+.profile h3{font-size:1.6rem;margin:0}
+.profile .role{color:var(--green-2);font-weight:600;margin-bottom:8px}
+.contact-list{list-style:none;display:grid;gap:8px;font-size:.93rem}
+.contact-list li{display:flex;gap:10px;align-items:center}
+.contact-list .ci{width:32px;height:32px;border-radius:8px;background:var(--green-soft);display:grid;place-items:center}
+@media(max-width:800px){.profile{grid-template-columns:1fr;text-align:center}.avatar{margin:0 auto}.contact-list li{justify-content:center}}
+
+/* Footer */
+footer{background:var(--foot);color:#c9d3cf;padding:44px 0 28px;font-size:.9rem}
+footer h4{color:#fff;font-family:'Fraunces',serif;margin-bottom:10px}
+footer a{color:#c9d3cf;text-decoration:none;cursor:pointer}
+footer a:hover{color:var(--gold)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+@media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+.foot-grid ul{list-style:none;display:grid;gap:6px}
+.disclaimer{border-top:1px solid #2c3d38;margin-top:28px;padding-top:18px;font-size:.78rem;color:#8a9a95}
+.wa{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.6rem;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.2);z-index:60}
+
+/* FAQ */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
+
+/* ===== THEMES ===== */
+[data-theme="navy"]{--ink:#121a2b;--ink-2:#3a4560;--muted:#6a7590;--bg:#f6f7fb;--line:#dde3ee;--green:#1f3a68;--green-2:#2b5294;--green-soft:#e6edf8;--gold:#f28c28;--gold-soft:#feeedd;--gold-ink:#9a4f08;--note-ink:#7a4108;--gold-line:#f8cfa6;--header:rgba(246,247,251,.94);--foot:#0f1b33}
+[data-theme="maroon"]{--ink:#2a1414;--ink-2:#5a3a36;--muted:#86685f;--bg:#fbf5ec;--line:#ead8c3;--green:#7a1f2b;--green-2:#9b2c3a;--green-soft:#f7e5e6;--gold:#c9962b;--gold-soft:#f7edd3;--gold-ink:#7a5810;--note-ink:#6a4a0c;--gold-line:#e8d39f;--header:rgba(251,245,236,.94);--foot:#2a1012}
+[data-theme="midnight"]{--ink:#e9eff3;--ink-2:#b7c4cd;--muted:#8a99a5;--bg:#0e161e;--card:#16212c;--line:#263544;--green:#14866a;--green-2:#3cc79c;--green-soft:#173a32;--gold:#f2b544;--gold-soft:#33291a;--gold-ink:#f2c46a;--note-ink:#f0d290;--gold-line:#5a4520;--header:rgba(14,22,30,.92);--foot:#070c11}
+[data-theme="midnight"] .warn{background:#3a1d18;color:#f4b8a8}
+[data-theme="midnight"] .risk.high{background:#3a1d18;color:#f4a08c}
+[data-theme="midnight"] .avatar{border-color:#33291a}
+[data-theme="midnight"] .menu-btn{color:var(--ink)}
+.brand-mark{display:flex;align-items:center;justify-content:center;white-space:nowrap;letter-spacing:-.03em;font-size:.95rem}
+.brand-mark span{display:inline}
+[data-theme="midnight"] .stat b,[data-theme="midnight"] .alloc,[data-theme="midnight"] td b,[data-theme="midnight"] .risk.low,[data-theme="midnight"] .profile .role{color:var(--green-2)}
+[data-theme="midnight"] .btn-ghost{color:var(--green-2);border-color:var(--green-2)}
+
+/* ================= GLOSS THEMES ================= */
+[data-theme="sapphire"]{
+  --ink:#f4f7ff;--ink-2:#cdd7f2;--muted:#a3b1d6;--bg:#0a1430;--card:#122150;--line:#2a3d74;
+  --green:#1d3f9e;--green-2:#f2c75c;--green-soft:#1a2d66;
+  --gold:#f2c14e;--gold-soft:#2b2a1c;--gold-ink:#f8d98a;--note-ink:#f8e1a8;--gold-line:#6a5622;
+  --header:rgba(9,18,44,.82);--foot:#060d22;
+  --btn-a:#ffe08a;--btn-b:#e0a92c;--btn-ink:#1e1503;--btn-glow:rgba(240,190,70,.35);
+  --ghost-ink:#ffe08a;--ghost-line:rgba(255,224,138,.6);
+  --tile-a:#16275c;--tile-b:#0f1c46;--tile-line:rgba(140,170,255,.22);--tile-hi:rgba(255,255,255,.14);--tile-shadow:rgba(0,0,0,.35);
+  --panel-a:#1c3a8f;--panel-b:#0f2160;--panel-ink:#ffffff;--panel-sub:#d4defa;
+  --em-a:#ffe08a;--em-b:#d39a22;--em-ink:#152a6b;
+  --th-a:#1f45ab;--th-b:#163485;--accent:#f2c75c;--accent-2:#8fb0ff;
+  --glow-1:rgba(64,110,255,.28);--glow-2:rgba(242,193,78,.14);
+}
+[data-theme="emerald"]{
+  --ink:#0d221c;--ink-2:#2f463f;--muted:#55695f;--bg:#f3f6f2;--card:#ffffff;--line:#d6e2da;
+  --green:#05634a;--green-2:#05634a;--green-soft:#e1f1ea;
+  --gold:#c89b3c;--gold-soft:#f8efda;--gold-ink:#6e4f0e;--note-ink:#5e430b;--gold-line:#e6d29f;
+  --header:rgba(243,246,242,.86);--foot:#062b21;
+  --btn-a:#0a7556;--btn-b:#04503c;--btn-ink:#ffffff;--btn-glow:rgba(5,99,74,.35);
+  --ghost-ink:#05634a;--ghost-line:#05634a;
+  --tile-a:#ffffff;--tile-b:#f1f7f3;--tile-line:#d3e3d9;--tile-hi:rgba(255,255,255,1);--tile-shadow:rgba(6,60,44,.10);
+  --panel-a:#086a4f;--panel-b:#04402f;--panel-ink:#ffffff;--panel-sub:#e6f7ef;
+  --em-a:#f4d58a;--em-b:#b8862a;--em-ink:#04402f;
+  --th-a:#077a5a;--th-b:#04553f;--accent:#75520a;--accent-2:#05634a;
+  --glow-1:rgba(10,140,103,.12);--glow-2:rgba(200,155,60,.12);
+}
+[data-theme] body{background:radial-gradient(900px 500px at 85% -10%,var(--glow-1),transparent 60%),radial-gradient(700px 400px at -10% 30%,var(--glow-2),transparent 60%),var(--bg);background-attachment:fixed}
+[data-theme] .eyebrow{color:var(--accent)}
+[data-theme] .brand{gap:12px}
+[data-theme] .brand small{color:var(--muted)}
+[data-theme] .brand b span{color:var(--accent)!important}
+.brand b{font-size:1.2rem!important;letter-spacing:-.01em}
+.emblem{flex:none;filter:drop-shadow(0 4px 10px var(--btn-glow))}
+
+/* glossy buttons */
+[data-theme] .btn{position:relative;overflow:hidden;border-radius:12px;letter-spacing:.01em}
+[data-theme] .btn-primary{background:linear-gradient(180deg,var(--btn-a),var(--btn-b));color:var(--btn-ink);border:1px solid rgba(0,0,0,.08);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(0,0,0,.14),0 8px 22px var(--btn-glow)}
+[data-theme] .btn-primary:hover{background:linear-gradient(180deg,var(--btn-a),var(--btn-b));filter:brightness(1.06)}
+[data-theme] .btn-primary::before{content:"";position:absolute;left:0;right:0;top:0;height:50%;background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,.04));border-radius:12px 12px 40% 40%/12px 12px 10px 10px;pointer-events:none}
+[data-theme] .btn-primary::after{content:"";position:absolute;top:-20%;bottom:-20%;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite;pointer-events:none}
+@keyframes shine{0%,70%{left:-60%}100%{left:130%}}
+[data-theme] .btn-ghost{background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.02));color:var(--ghost-ink);border:1.5px solid var(--ghost-line);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+[data-theme] .btn-gold{background:linear-gradient(180deg,#ffe08a,#e0a92c);color:#1e1503;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 8px 22px rgba(240,190,70,.3)}
+.btn-sm{padding:8px 14px;font-size:.85rem}
+
+/* nav tabs glossy */
+[data-theme] .tabs a{color:var(--ink-2)}
+[data-theme] .tabs a:hover{background:var(--green-soft);color:var(--ink)}
+[data-theme] .tabs a.active{background:linear-gradient(180deg,var(--btn-a),var(--btn-b));color:var(--btn-ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 4px 12px var(--btn-glow)}
+
+/* glossy tiles */
+[data-theme] .card,[data-theme] .stat,[data-theme] .step,[data-theme] .q-card,[data-theme] details,[data-theme] .profile,[data-theme] .table-wrap{
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0) 42%),linear-gradient(160deg,var(--tile-a),var(--tile-b));
+  border:1px solid var(--tile-line);border-radius:18px;
+  box-shadow:inset 0 1px 0 var(--tile-hi),0 12px 32px var(--tile-shadow);transition:transform .2s,box-shadow .2s,border-color .2s}
+[data-theme] .card:hover,[data-theme] .step:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:inset 0 1px 0 var(--tile-hi),0 18px 40px var(--tile-shadow)}
+[data-theme] .card p,[data-theme] .step p{color:var(--ink-2)}
+[data-theme] .stat b{color:var(--accent)}
+[data-theme] .stat span{color:var(--muted)}
+[data-theme] .icon{background:linear-gradient(160deg,var(--btn-a),var(--btn-b));box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 6px 14px var(--btn-glow);border-radius:14px}
+[data-theme] .step::before{background:linear-gradient(180deg,var(--btn-a),var(--btn-b));color:var(--btn-ink);box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+[data-theme] .tier.featured{border:2px solid var(--accent)}
+[data-theme] .tier .ribbon{background:linear-gradient(180deg,var(--btn-a),var(--btn-b));color:var(--btn-ink)}
+[data-theme] .tier li::before{color:var(--accent)}
+[data-theme] .tag{background:var(--gold-soft);color:var(--gold-ink);border:1px solid var(--gold-line)}
+[data-theme] .banner{background:linear-gradient(135deg,var(--panel-a),var(--panel-b));border:1px solid var(--tile-line);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 14px 34px var(--tile-shadow);border-radius:20px}
+[data-theme] .banner h3{color:var(--panel-ink)}
+[data-theme] .banner .muted{color:var(--panel-sub)}
+[data-theme] th{background:linear-gradient(180deg,var(--th-a),var(--th-b));color:#fff}
+[data-theme] td{border-color:var(--line);color:var(--ink-2)}
+[data-theme] td b{color:var(--accent)}
+[data-theme] .chip{background:var(--card);color:var(--ink-2);border-color:var(--line)}
+[data-theme] .chip.on{background:linear-gradient(180deg,var(--btn-a),var(--btn-b));color:var(--btn-ink);border-color:transparent}
+[data-theme] .result{background:var(--green-soft);border-left-color:var(--accent);color:var(--ink)}
+[data-theme] .result .muted{color:var(--ink-2)}
+[data-theme] .opt{background:var(--card);color:var(--ink);border-color:var(--line)}
+[data-theme] .opt.on{background:var(--green-soft);border-color:var(--accent)}
+[data-theme] .opt.on .dot{border-color:var(--accent);background:var(--accent);box-shadow:inset 0 0 0 3px var(--card)}
+[data-theme] .progress div{background:linear-gradient(90deg,var(--btn-b),var(--btn-a))}
+[data-theme] .rec{border-left:5px solid var(--accent)}
+[data-theme] .alloc{color:var(--accent)}
+[data-theme] .note{background:var(--gold-soft);color:var(--note-ink);border:1px solid var(--gold-line)}
+[data-theme] input,[data-theme] select,[data-theme] textarea{background:var(--card);color:var(--ink);border-color:var(--line)}
+[data-theme] input::placeholder,[data-theme] textarea::placeholder{color:var(--muted)}
+[data-theme] summary::after{color:var(--accent)}
+[data-theme] .avatar,[data-theme] .mini-av{background:linear-gradient(160deg,var(--em-a),var(--em-b));color:var(--em-ink);border-color:var(--gold-soft)}
+[data-theme] .profile .role{color:var(--accent)}
+[data-theme] .contact-list .ci{background:var(--green-soft)}
+[data-theme] .contact-list a{color:var(--ink)}
+[data-theme] .risk.low{background:#d9f3e6;color:#0b5a3c}
+[data-theme] .risk.med{background:#fbeccc;color:#6e4a06}
+[data-theme] .risk.high{background:#fbe0da;color:#8a2a17}
+[data-theme] .warn{background:#fbe0da;color:#6e1f10;border-color:#f0b9ab}
+[data-theme] a{color:var(--accent-2)}
+[data-theme] footer a{color:#c8d2e6}
+[data-theme] footer a:hover{color:var(--gold)}
+[data-theme] a.brand{color:var(--ink)}
+[data-theme] footer{color:#c8d2e6}
+[data-theme] .menu-btn{color:var(--ink);border-color:var(--line)}
+
+/* hero */
+.hero2{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center}
+@media(max-width:900px){.hero2{grid-template-columns:1fr}}
+.lockup{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.wordmark{font-family:'Fraunces',serif;font-weight:700;font-size:2.1rem;line-height:1;color:var(--ink);letter-spacing:-.01em}
+.wordmark span{color:var(--accent)}
+.brandtag{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.grad-text{background:linear-gradient(90deg,var(--btn-b),var(--accent),var(--btn-b));-webkit-background-clip:text;background-clip:text;color:transparent}
+[data-theme="emerald"] .grad-text{background:linear-gradient(90deg,#05634a,#077a5a 50%,#75520a);-webkit-background-clip:text;background-clip:text}
+[data-theme="sapphire"] .grad-text{background:linear-gradient(90deg,#ffe08a,#f2c14e 50%,#ffd36b);-webkit-background-clip:text;background-clip:text}
+.trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.trust li{font-size:.82rem;font-weight:600;padding:6px 12px;border-radius:99px;background:var(--green-soft);color:var(--ink);border:1px solid var(--tile-line)}
+.hero2-panel{position:relative;border-radius:24px;padding:22px;color:var(--panel-ink);
+  background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0) 40%),linear-gradient(150deg,var(--panel-a),var(--panel-b));
+  border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 24px 60px var(--tile-shadow),0 0 0 6px var(--glow-1)}
+.panel-head{display:flex;justify-content:space-between;align-items:center;font-weight:700;margin-bottom:14px;font-size:.95rem}
+.live{font-size:.74rem;font-weight:700;color:#9df0c8;background:rgba(0,0,0,.22);padding:4px 10px;border-radius:99px}
+.ptiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ptile{display:block;text-decoration:none;color:var(--panel-ink)!important;padding:16px;border-radius:16px;
+  background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.22);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35);transition:transform .2s,background .2s}
+.ptile:hover{transform:translateY(-3px);background:linear-gradient(180deg,rgba(255,255,255,.26),rgba(255,255,255,.1))}
+.ptile i{font-style:normal;font-size:1.5rem;display:block;margin-bottom:6px}
+.ptile b{display:block;font-size:1rem}
+.ptile small{color:var(--panel-sub);font-size:.8rem}
+.panel-foot{display:flex;align-items:center;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.18)}
+.panel-foot b{display:block;font-size:.95rem}
+.panel-foot small{color:var(--panel-sub);font-size:.78rem}
+.panel-foot .btn{margin-left:auto}
+.mini-av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-family:'Fraunces',serif;flex:none}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" data-tab="home">
+      <svg class="emblem" width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="egH" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--em-a)"/><stop offset="1" style="stop-color:var(--em-b)"/></linearGradient><linearGradient id="egHh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><path d="M24 2.5 42.5 8.6V23c0 11.2-7.9 18.6-18.5 22.5C13.4 41.6 5.5 34.2 5.5 23V8.6Z" fill="url(#egH)"/><path d="M24 2.5 42.5 8.6V23c0 1-.1 2-.2 3H5.7C5.6 25 5.5 24 5.5 23V8.6Z" fill="url(#egHh)"/><text x="24" y="25.5" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="19" style="fill:var(--em-ink)">₹</text><polyline points="14,36 20,31.5 25,34 34,27" fill="none" style="stroke:var(--em-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="30,27 34,27 34,31" fill="none" style="stroke:var(--em-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><b>Expert Tax <span style="color:var(--gold)">Center</span></b></div>
+    </a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.tabs').classList.toggle('open')">☰</button>
+    <ul class="tabs">
+      <li><a href="#home" data-tab="home">Home</a></li>
+      <li><a href="#services" data-tab="services">Tax Services</a></li>
+      <li><a href="#itr" data-tab="itr">ITR Guide</a></li>
+      <li><a href="#clients" data-tab="clients">Who We Serve</a></li>
+      <li><a href="#planner" data-tab="planner">Financial Planner</a></li>
+      <li><a href="#investments" data-tab="investments">Investments</a></li>
+      <li><a href="#enquiry" data-tab="enquiry">Enquiry</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<section class="page" id="home">
+  <div class="wrap">
+    <div class="hero2">
+      <div class="hero2-copy">
+        <div class="lockup"><svg class="emblem" width="64" height="64" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="egL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--em-a)"/><stop offset="1" style="stop-color:var(--em-b)"/></linearGradient><linearGradient id="egLh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><path d="M24 2.5 42.5 8.6V23c0 11.2-7.9 18.6-18.5 22.5C13.4 41.6 5.5 34.2 5.5 23V8.6Z" fill="url(#egL)"/><path d="M24 2.5 42.5 8.6V23c0 1-.1 2-.2 3H5.7C5.6 25 5.5 24 5.5 23V8.6Z" fill="url(#egLh)"/><text x="24" y="25.5" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="19" style="fill:var(--em-ink)">₹</text><polyline points="14,36 20,31.5 25,34 34,27" fill="none" style="stroke:var(--em-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="30,27 34,27 34,31" fill="none" style="stroke:var(--em-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><div class="wordmark">Expert Tax <span>Center</span></div><div class="brandtag">Tax &amp; Finance Advisory · India</div></div>
+        </div>
+        <h1>Smart tax filing.<br><span class="grad-text">Steady wealth building.</span></h1>
+        <p class="lead" style="margin-top:16px">Trusted income tax, GST and savings advice for individuals, families and growing businesses across India. File correctly, pay only what you owe, and put your savings to work.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#enquiry" data-tab="enquiry">Book a consultation →</a>
+          <a class="btn btn-ghost" href="#planner" data-tab="planner">Free savings planner</a>
+        </div>
+        <ul class="trust">
+          <li>✓ ITR-1 to ITR-7</li><li>✓ GST &amp; TDS</li><li>✓ Pan-India, online</li><li>✓ Kannada · English · Hindi</li>
+        </ul>
+      </div>
+      <div class="hero2-panel">
+        <div class="panel-head"><span>How can we help today?</span><span class="live">● Taking new clients</span></div>
+        <div class="ptiles">
+          <a class="ptile" href="#itr" data-tab="itr"><i>🧾</i><b>File my ITR</b><small>Right form, right regime</small></a>
+          <a class="ptile" href="#services" data-tab="services"><i>🧮</i><b>Save tax</b><small>Legal planning, all year</small></a>
+          <a class="ptile" href="#clients" data-tab="clients"><i>🏪</i><b>Business &amp; GST</b><small>Shops, firms, SMEs</small></a>
+          <a class="ptile" href="#planner" data-tab="planner"><i>📈</i><b>Grow savings</b><small>PPF, ELSS, MF &amp; more</small></a>
+        </div>
+        <div class="panel-foot"><span class="mini-av">RK</span><div><b>Ravi Kumar</b><small>Tax &amp; Finance Advisor</small></div><a class="btn btn-primary btn-sm" href="#enquiry" data-tab="enquiry">Talk to Ravi</a></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>All ITRs</b><span>ITR-1 to ITR-7 handled</span></div>
+      <div class="stat"><b>Pan-India</b><span>In-person &amp; online consultations</span></div>
+      <div class="stat"><b>Individuals → SMEs</b><span>One consultant, every stage</span></div>
+      <div class="stat"><b>Kannada · English · Hindi</b><span>Talk in your language</span></div>
+    </div>
+
+    <div class="block">
+      <div class="section-head"><span class="eyebrow">Two ways we help</span><h2>Tax consultancy and financial guidance</h2></div>
+      <div class="grid g2">
+        <div class="card">
+          <div class="icon">🧾</div>
+          <h3>Tax Consultation &amp; ITR Filing</h3>
+          <p>From a simple salary return to business books, GST and notices — handled end to end, with documents checked before anything is filed.</p>
+          <div class="btn-row"><a class="btn btn-ghost" href="#services" data-tab="services">See tax services</a></div>
+        </div>
+        <div class="card">
+          <div class="icon">📈</div>
+          <h3>Savings &amp; Investment Guidance</h3>
+          <p>Answer a few questions about your earnings, expenses and goals, and get 2–3 suggestions across PPF, Post Office schemes, bank FDs, ELSS and mutual funds.</p>
+          <div class="btn-row"><a class="btn btn-ghost" href="#planner" data-tab="planner">Start the planner</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="section-head"><span class="eyebrow">How it works</span><h2>Four simple steps</h2></div>
+      <div class="steps">
+        <div class="step"><h3>Enquire</h3><p class="muted">Send the enquiry form or WhatsApp us with your need.</p></div>
+        <div class="step"><h3>Share documents</h3><p class="muted">Form 16, bank statements, AIS — we send you a checklist.</p></div>
+        <div class="step"><h3>Review &amp; plan</h3><p class="muted">We compute tax under both regimes and explain the options.</p></div>
+        <div class="step"><h3>File &amp; follow up</h3><p class="muted">Return filed, e-verified, and refund status tracked.</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="section-head"><span class="eyebrow">Common questions</span><h2>FAQ</h2></div>
+      <details><summary>Do I need to file a return if my tax is zero?</summary><p>Often yes. Filing is needed if your gross income crosses the basic exemption limit, and it's also useful to claim TDS refunds, carry forward losses, or show income proof for loans and visas.</p></details>
+      <details><summary>Old regime or new regime — which is better for me?</summary><p>It depends on how much you claim in deductions (80C, 80D, home loan interest, HRA). We calculate your tax both ways and recommend the lower one before filing.</p></details>
+      <details><summary>Can you help if I've received an income tax notice?</summary><p>Yes. Share the notice and we'll explain what it means, what's being asked, and draft and file the response within the deadline.</p></details>
+      <details><summary>Do you work with clients outside Karnataka?</summary><p>Yes — we serve clients anywhere in India through phone, WhatsApp and video calls, with documents shared securely online.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="page" id="services">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Tax services</span><h2>Everything around your taxes, in one place</h2><p class="lead">Fixed, transparent fees quoted after a short review. No surprises.</p></div>
+    <div class="grid g3">
+      <div class="card"><div class="icon">📄</div><h3>Income Tax Return Filing</h3><p>Salaried, pensioners, capital gains, house property, business and presumptive income. Both regimes compared.</p></div>
+      <div class="card"><div class="icon">🧮</div><h3>Tax Planning</h3><p>Year-round planning using 80C, 80D, NPS, HRA, home loan benefits and capital gains exemptions — legally reducing what you pay.</p></div>
+      <div class="card"><div class="icon">📬</div><h3>Notice &amp; Scrutiny Support</h3><p>Responses to defective return, mismatch, demand and scrutiny notices, plus rectification requests.</p></div>
+      <div class="card"><div class="icon">🏪</div><h3>GST Registration &amp; Returns</h3><p>New GST registration, monthly/quarterly returns, composition scheme guidance and annual returns.</p></div>
+      <div class="card"><div class="icon">🏦</div><h3>TDS / TCS Returns</h3><p>TDS deduction advice, quarterly returns, Form 16/16A generation and correction statements.</p></div>
+      <div class="card"><div class="icon">📅</div><h3>Advance Tax</h3><p>Quarterly advance tax estimates so you avoid interest under sections 234B and 234C.</p></div>
+      <div class="card"><div class="icon">🏠</div><h3>Capital Gains</h3><p>Property, shares and mutual fund sales — gain computation, indexation where applicable and reinvestment options.</p></div>
+      <div class="card"><div class="icon">✈️</div><h3>NRI Taxation</h3><p>Residential status, Indian income of NRIs, TDS on property sale and lower-deduction certificates.</p></div>
+      <div class="card"><div class="icon">📚</div><h3>Bookkeeping &amp; Accounts</h3><p>Monthly books, profit &amp; loss and balance sheet preparation for small businesses and professionals.</p></div>
+    </div>
+
+    <div class="block">
+      <div class="section-head"><span class="eyebrow">Engagement options</span><h2>Choose how you work with us</h2></div>
+      <div class="grid g3">
+        <div class="card tier">
+          <h3>Individual</h3><p class="muted">Salaried, pensioners, freelancers</p>
+          <ul><li>ITR filing (ITR-1 / 2 / 4)</li><li>Old vs new regime comparison</li><li>AIS / 26AS reconciliation</li><li>Refund tracking</li><li>One follow-up review call</li></ul>
+        </div>
+        <div class="card tier featured"><span class="ribbon">Most popular</span>
+          <h3>Small Business</h3><p class="muted">Shops, traders, professionals, startups</p>
+          <ul><li>Business ITR (ITR-3 / 4 / 5)</li><li>GST returns &amp; registration</li><li>Bookkeeping support</li><li>Advance tax reminders</li><li>Notice handling</li></ul>
+        </div>
+        <div class="card tier">
+          <h3>Mid-size Business</h3><p class="muted">Firms, LLPs, private companies</p>
+          <ul><li>ITR-5 / ITR-6 filing</li><li>TDS compliance &amp; returns</li><li>Monthly compliance calendar</li><li>Coordination with your auditor</li><li>Dedicated point of contact</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <div><h3>Not sure which service you need?</h3><p class="muted">Tell us your situation — we'll suggest the right option.</p></div>
+      <a class="btn btn-primary" href="#enquiry" data-tab="enquiry">Send an enquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ITR GUIDE ================= -->
+<section class="page" id="itr">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">ITR guide</span><h2>Which ITR form should you file?</h2><p class="lead">A quick overview of the income tax return forms. Filing the wrong form can make your return "defective", so check before you file.</p></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Form</th><th>Who can file</th><th>Typical income covered</th></tr></thead>
+        <tbody>
+          <tr><td><b>ITR-1</b><br>Sahaj</td><td>Resident individuals with total income up to ₹50 lakh</td><td>Salary or pension, one house property, interest and other sources, small agricultural income</td></tr>
+          <tr><td><b>ITR-2</b></td><td>Individuals &amp; HUFs without business income</td><td>Capital gains, more than one house property, foreign assets or income, income above ₹50 lakh</td></tr>
+          <tr><td><b>ITR-3</b></td><td>Individuals &amp; HUFs with business or professional income</td><td>Proprietorship business, professional practice, F&amp;O / intraday trading, partner's share from a firm</td></tr>
+          <tr><td><b>ITR-4</b><br>Sugam</td><td>Resident individuals, HUFs and firms (not LLPs) with income up to ₹50 lakh</td><td>Presumptive income under sections 44AD, 44ADA or 44AE</td></tr>
+          <tr><td><b>ITR-5</b></td><td>Partnership firms, LLPs, AOPs, BOIs</td><td>Business income of the entity</td></tr>
+          <tr><td><b>ITR-6</b></td><td>Companies (other than those claiming charitable exemption)</td><td>Corporate income</td></tr>
+          <tr><td><b>ITR-7</b></td><td>Trusts, institutions, political parties and similar bodies</td><td>Income of charitable / religious trusts and specified institutions</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:.82rem;margin-top:10px">Eligibility conditions change from year to year. The Income-tax Act, 2025 replaces the 1961 Act from 1 April 2026, so forms and section numbers may change for later years. We confirm the correct form for your year before filing.</p>
+
+    <div class="card itr-finder">
+      <h3>Quick ITR finder</h3>
+      <p class="muted">Select all the income types you have:</p>
+      <div class="chips" id="itrChips">
+        <button class="chip" data-k="salary">Salary / Pension</button>
+        <button class="chip" data-k="house1">One house property</button>
+        <button class="chip" data-k="house2">More than one house</button>
+        <button class="chip" data-k="cg">Capital gains (shares / MF / property)</button>
+        <button class="chip" data-k="biz">Business / Profession (books kept)</button>
+        <button class="chip" data-k="presumptive">Presumptive income (44AD / 44ADA)</button>
+        <button class="chip" data-k="foreign">Foreign income / assets</button>
+        <button class="chip" data-k="above50">Total income above ₹50 lakh</button>
+        <button class="chip" data-k="firm">I'm filing for a firm / LLP</button>
+        <button class="chip" data-k="company">I'm filing for a company</button>
+      </div>
+      <div class="result" id="itrResult"></div>
+    </div>
+
+    <div class="block">
+      <div class="section-head"><span class="eyebrow">Be ready</span><h2>Documents checklist</h2></div>
+      <div class="grid g3">
+        <div class="card"><h3>Everyone</h3><p>PAN &amp; Aadhaar (linked), bank account details, AIS / TIS and Form 26AS, previous year's return</p></div>
+        <div class="card"><h3>Salaried / Pensioners</h3><p>Form 16, salary slips, rent receipts for HRA, investment proofs (80C, 80D), home loan certificate</p></div>
+        <div class="card"><h3>Business / Professionals</h3><p>Bank statements, sales and purchase records, GST returns, expense bills, TDS certificates (Form 16A)</p></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="section-head"><span class="eyebrow">Key dates</span><h2>Typical annual deadlines</h2></div>
+      <div class="grid g4">
+        <div class="stat"><b>31 July</b><span>ITR for individuals not needing audit (often extended)</span></div>
+        <div class="stat"><b>31 Oct</b><span>Returns for businesses needing tax audit</span></div>
+        <div class="stat"><b>31 Dec</b><span>Belated / revised return (with late fee where applicable)</span></div>
+        <div class="stat"><b>15th of Jun · Sep · Dec · Mar</b><span>Advance tax instalments</span></div>
+      </div>
+      <p class="muted" style="font-size:.82rem;margin-top:10px">Dates are indicative; the government frequently extends them. We send reminders to all clients.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLIENTS ================= -->
+<section class="page" id="clients">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Who we serve</span><h2>Individuals, small businesses and mid-size firms</h2><p class="lead">Whether it's your first return or your company's annual compliance, the advice is personal and the consultant is the same person.</p></div>
+
+    <div class="grid g3">
+      <div class="card"><div class="icon">👤</div><h3>Individual clients</h3><p>One-to-one consultation for your personal return, tax planning and investment choices.</p><div class="pill-row"><span class="tag">Salaried</span><span class="tag">Pensioners</span><span class="tag">NRIs</span><span class="tag">Senior citizens</span></div></div>
+      <div class="card"><div class="icon">🏪</div><h3>Small clients</h3><p>Shops, freelancers and professionals who need returns, GST and simple books done correctly.</p><div class="pill-row"><span class="tag">Traders</span><span class="tag">Freelancers</span><span class="tag">Doctors</span><span class="tag">Startups</span></div></div>
+      <div class="card"><div class="icon">🏢</div><h3>Mid-size clients</h3><p>Firms, LLPs and private companies needing regular TDS, GST and income tax compliance.</p><div class="pill-row"><span class="tag">Manufacturers</span><span class="tag">LLPs</span><span class="tag">Pvt Ltd</span><span class="tag">Distributors</span></div></div>
+    </div>
+
+    <div class="block">
+      <div class="section-head"><span class="eyebrow">Industries</span><h2>Sectors we work with</h2></div>
+      <div class="grid g4">
+        <div class="card"><div class="icon">💼</div><h3>Salaried professionals</h3><p>IT, banking, government and private sector employees.</p></div>
+        <div class="card"><div class="icon">🌾</div><h3>Agriculture &amp; farmers</h3><p>Agricultural income, land sales and allied businesses like dairy and poultry.</p></div>
+        <div class="card"><div class="icon">🛒</div><h3>Retail &amp; kirana</h3><p>Shops, wholesalers and distributors — presumptive tax and GST.</p></div>
+        <div class="card"><div class="icon">🩺</div><h3>Doctors &amp; clinics</h3><p>Professional income, 44ADA, clinic expenses and equipment.</p></div>
+        <div class="card"><div class="icon">🏭</div><h3>Manufacturing &amp; MSMEs</h3><p>Small units, job work and MSME compliance.</p></div>
+        <div class="card"><div class="icon">🚚</div><h3>Transport &amp; logistics</h3><p>Goods carriage owners under 44AE and fleet operators.</p></div>
+        <div class="card"><div class="icon">🏗️</div><h3>Real estate &amp; construction</h3><p>Contractors, builders, property sellers and capital gains.</p></div>
+        <div class="card"><div class="icon">🍽️</div><h3>Hotels &amp; restaurants</h3><p>GST on food services, staff TDS and business returns.</p></div>
+        <div class="card"><div class="icon">💻</div><h3>Freelancers &amp; creators</h3><p>Consultants, YouTubers, designers and foreign clients.</p></div>
+        <div class="card"><div class="icon">📈</div><h3>Traders &amp; investors</h3><p>Shares, F&amp;O, mutual funds and crypto reporting.</p></div>
+        <div class="card"><div class="icon">🎓</div><h3>Education &amp; trusts</h3><p>Coaching centres, schools and charitable trusts.</p></div>
+        <div class="card"><div class="icon">🌍</div><h3>NRIs</h3><p>Rental income, property sales and DTAA relief.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLANNER ================= -->
+<section class="page" id="planner">
+  <div class="wrap">
+    <div class="planner">
+      <div style="text-align:center">
+        <span class="eyebrow">Free financial planner</span>
+        <h2>Where should your savings go?</h2>
+        <p class="lead" style="margin:0 auto">Answer 10 quick questions about your income, expenses and goals. You'll get 2–3 suggestions that suit your lifestyle and help you save tax.</p>
+      </div>
+
+      <div id="quiz">
+        <div class="progress"><div id="bar"></div></div>
+        <div class="q-meta"><span id="qCount">Question 1 of 10</span><span id="qCat"></span></div>
+        <div class="q-card">
+          <h3 id="qTitle"></h3>
+          <p class="muted" id="qHelp"></p>
+          <div class="opts" id="qOpts"></div>
+          <div class="q-nav">
+            <button class="btn btn-ghost" id="prevBtn">← Back</button>
+            <button class="btn btn-primary" id="nextBtn" disabled>Next →</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="results" style="display:none">
+        <div class="summary-bar" id="sumBar"></div>
+        <div id="alerts"></div>
+        <h3 style="margin:20px 0 14px">Your top recommendations</h3>
+        <div id="recs"></div>
+        <div class="note">These are general, educational suggestions based on your answers — not personalised investment advice. Interest rates for PPF and Post Office schemes are set by the government each quarter; mutual fund returns are not guaranteed. Speak to Ravi before investing.</div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#enquiry" data-tab="enquiry" id="discussBtn">Discuss this plan with Ravi →</a>
+          <button class="btn btn-ghost" id="restartBtn">Start again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INVESTMENTS ================= -->
+<section class="page" id="investments">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Investment options</span><h2>Popular savings &amp; investment choices in India</h2><p class="lead">A plain-language comparison to help you understand what fits your goals. Rates change — always check the latest before investing.</p></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Option</th><th>Best for</th><th>Lock-in / Tenure</th><th>Risk</th><th>Tax angle</th></tr></thead>
+        <tbody>
+          <tr><td><b>PPF</b><br>Public Provident Fund</td><td>Safe long-term savings, retirement, children's future</td><td>15 years (partial withdrawal later)</td><td><span class="risk low">Very low</span></td><td>80C deduction (old regime); interest and maturity tax-free</td></tr>
+          <tr><td><b>ELSS</b><br>Tax-saving mutual funds</td><td>Tax saving with equity growth potential</td><td>3 years (shortest among 80C options)</td><td><span class="risk high">Market-linked</span></td><td>80C deduction (old regime); gains taxed as LTCG above the exemption limit</td></tr>
+          <tr><td><b>Mutual Fund SIP</b><br>Index / flexi-cap / hybrid</td><td>Wealth building over 5+ years</td><td>No lock-in (exit load may apply)</td><td><span class="risk med">Moderate–High</span></td><td>Capital gains tax on redemption</td></tr>
+          <tr><td><b>Post Office NSC</b></td><td>Fixed, guaranteed returns</td><td>5 years</td><td><span class="risk low">Very low</span></td><td>80C deduction (old regime); interest taxable</td></tr>
+          <tr><td><b>Post Office MIS</b><br>Monthly Income Scheme</td><td>Regular monthly income</td><td>5 years</td><td><span class="risk low">Very low</span></td><td>Interest taxable</td></tr>
+          <tr><td><b>Post Office RD</b></td><td>Building a monthly saving habit</td><td>5 years</td><td><span class="risk low">Very low</span></td><td>Interest taxable</td></tr>
+          <tr><td><b>SCSS</b><br>Senior Citizens' Savings Scheme</td><td>Retirees wanting high, safe quarterly income</td><td>5 years (extendable)</td><td><span class="risk low">Very low</span></td><td>80C deduction (old regime); interest taxable</td></tr>
+          <tr><td><b>Sukanya Samriddhi</b></td><td>Parents of a girl child under 10</td><td>Till age 21 of the girl</td><td><span class="risk low">Very low</span></td><td>80C deduction (old regime); interest and maturity tax-free</td></tr>
+          <tr><td><b>Bank FD</b><br>Scheduled banks</td><td>Emergency fund, short-term goals</td><td>7 days – 10 years</td><td><span class="risk low">Low</span></td><td>5-year tax-saver FD qualifies for 80C (old regime); interest taxable</td></tr>
+          <tr><td><b>Co-operative Society / Bank FD</b></td><td>Slightly higher local FD rates</td><td>Flexible</td><td><span class="risk med">Low–Moderate</span></td><td>Interest taxable. Check the bank is DICGC-insured (covers up to ₹5 lakh per depositor per bank); credit societies usually are not</td></tr>
+          <tr><td><b>NPS</b><br>National Pension System</td><td>Retirement corpus with extra tax benefit</td><td>Till age 60</td><td><span class="risk med">Moderate</span></td><td>Extra ₹50,000 under 80CCD(1B) (old regime); employer contribution deductible in both regimes</td></tr>
+          <tr><td><b>Gold</b><br>Gold ETF / Gold MF</td><td>Diversification, hedge against inflation</td><td>No lock-in</td><td><span class="risk med">Moderate</span></td><td>Capital gains tax on sale</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="block">
+      <div class="section-head"><span class="eyebrow">Simple rules</span><h2>The order we usually recommend</h2></div>
+      <div class="steps">
+        <div class="step"><h3>Emergency fund</h3><p class="muted">6 months of expenses in a savings account, FD or liquid fund.</p></div>
+        <div class="step"><h3>Insurance</h3><p class="muted">Term life cover and family health insurance before investing.</p></div>
+        <div class="step"><h3>Tax-saving base</h3><p class="muted">PPF / ELSS / NPS to use your deductions (if on the old regime).</p></div>
+        <div class="step"><h3>Grow wealth</h3><p class="muted">Monthly SIPs in diversified mutual funds for long-term goals.</p></div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <div><h3>Want suggestions based on your own numbers?</h3><p class="muted">Takes about 2 minutes.</p></div>
+      <a class="btn btn-gold" href="#planner" data-tab="planner">Open the planner</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRY ================= -->
+<section class="page" id="enquiry">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Enquiry</span><h2>Tell us what you need</h2><p class="lead">Fill in your details and Ravi will get back to you within one working day.</p></div>
+    <div class="enq-layout">
+      <div class="card">
+        <form id="enqForm" novalidate>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+          <div class="row">
+            <div class="field"><label for="f_name">Full name *</label><input id="f_name" name="name" autocomplete="name"><div class="err">Please enter your name</div></div>
+            <div class="field"><label for="f_phone">Mobile number *</label><input id="f_phone" name="phone" inputmode="numeric" placeholder="10-digit mobile" autocomplete="tel"><div class="err">Enter a valid 10-digit Indian mobile number</div></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="f_email">Email</label><input id="f_email" name="email" type="email" autocomplete="email"><div class="err">Enter a valid email</div></div>
+            <div class="field"><label for="f_city">City / Town *</label><input id="f_city" name="city"><div class="err">Please enter your city</div></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="f_type">I am a *</label>
+              <select id="f_type" name="client_type"><option value="">Select</option><option>Salaried individual</option><option>Pensioner / Senior citizen</option><option>Freelancer / Professional</option><option>Small business / Shop</option><option>Mid-size business / Firm / Company</option><option>NRI</option><option>Other</option></select><div class="err">Please choose one</div></div>
+            <div class="field"><label for="f_service">Service needed *</label>
+              <select id="f_service" name="service"><option value="">Select</option><option>ITR filing</option><option>Tax planning</option><option>Income tax notice</option><option>GST registration / returns</option><option>TDS returns</option><option>Capital gains</option><option>Bookkeeping</option><option>Investment / financial guidance</option><option>Other</option></select><div class="err">Please choose a service</div></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="f_income">Approx. annual income / turnover</label>
+              <select id="f_income" name="income"><option value="">Prefer not to say</option><option>Below ₹5 lakh</option><option>₹5 – 12 lakh</option><option>₹12 – 25 lakh</option><option>₹25 – 50 lakh</option><option>₹50 lakh – 2 crore</option><option>Above ₹2 crore</option></select></div>
+            <div class="field"><label for="f_contact">Preferred contact</label>
+              <select id="f_contact" name="contact_pref"><option>Phone call</option><option>WhatsApp</option><option>Email</option><option>In-person meeting</option></select></div>
+          </div>
+          <div class="field"><label for="f_msg">Your query *</label><textarea id="f_msg" name="message" rows="4" placeholder="E.g. I have salary and some mutual fund gains, need help filing my return"></textarea><div class="err">Please describe your query briefly</div></div>
+          <div class="field"><label class="check"><input type="checkbox" id="f_consent"> I agree to be contacted about my enquiry and for my details to be used only for this purpose, in line with India's Digital Personal Data Protection Act.</label><div class="err">Please give consent so we can contact you</div></div>
+          <p class="muted" style="font-size:.8rem;margin-bottom:14px">Please don't share PAN, Aadhaar or bank account numbers here. We'll collect documents securely once you're onboarded.</p>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Submit enquiry</button>
+        </form>
+        <div class="success" id="enqSuccess">
+          <div class="big">✅</div>
+          <h3>Thank you! Your enquiry has been received.</h3>
+          <p class="muted">Ravi will contact you within one working day.</p>
+          <div class="btn-row" style="justify-content:center"><a class="btn btn-ghost" id="waFollow" target="_blank" rel="noopener">Also send on WhatsApp</a></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:18px">
+          <h3>Office hours</h3>
+          <p>Mon – Sat: 10:00 am – 7:00 pm<br>Sunday: by appointment<br><span class="muted">Extended hours during July filing season</span></p>
+        </div>
+        <div class="card" style="margin-bottom:18px">
+          <h3>Office</h3>
+          <p>Gubbi, Tumakuru District<br>Karnataka, India<br><span class="muted">Online consultations across India</span></p>
+        </div>
+        <div class="card">
+          <h3>What happens next?</h3>
+          <p>1. We call you to understand your case<br>2. You get a document checklist and fee quote<br>3. Work starts once you confirm</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= PROFILE CARD (all pages) ================= -->
+<section style="padding:0 0 56px">
+  <div class="wrap">
+    <div class="profile">
+      <div class="avatar">RK</div>
+      <div>
+        <span class="eyebrow">Your tax expert</span>
+        <h3>Ravi Kumar</h3>
+        <div class="role">Tax Consultant &amp; Financial Advisor</div>
+        <p class="muted">Helping individuals, families and businesses across India file accurate returns, stay compliant and make sensible savings decisions. Straight answers, no jargon.</p>
+        <div class="pill-row"><span class="tag">Income Tax</span><span class="tag">GST</span><span class="tag">TDS</span><span class="tag">Tax Planning</span><span class="tag">Savings Guidance</span></div>
+      </div>
+      <ul class="contact-list">
+        <li><span class="ci">📞</span><a href="tel:+910000000000" id="pPhone">+91 00000 00000</a></li>
+        <li><span class="ci">✉️</span><a href="mailto:ravi@experttaxcenter.com" id="pEmail">ravi@experttaxcenter.com</a></li>
+        <li><span class="ci">💬</span><a href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><span class="ci">📍</span>Gubbi, Karnataka</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Expert Tax Center</h4><p>Tax consultancy and financial guidance for individuals and businesses across India.</p></div>
+      <div><h4>Tax</h4><ul><li><a data-tab="services">Tax services</a></li><li><a data-tab="itr">ITR guide</a></li><li><a data-tab="clients">Who we serve</a></li></ul></div>
+      <div><h4>Money</h4><ul><li><a data-tab="planner">Financial planner</a></li><li><a data-tab="investments">Investment options</a></li><li><a data-tab="enquiry">Enquiry</a></li></ul></div>
+    </div>
+    <div class="disclaimer">
+      © <span id="yr"></span> Expert Tax Center (experttaxcenter.com) · Ravi Kumar. All rights reserved.<br>
+      Disclaimer: Information on this website is for general education only and is not legal, tax or investment advice. Tax laws and scheme rates change; please consult before acting. Investment suggestions are general in nature and are not personalised advice from a SEBI-registered investment adviser. Mutual fund investments are subject to market risks; read all scheme-related documents carefully.
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/910000000000" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+/* ============ CONFIG — replace later ============ */
+const CONFIG = {
+  whatsapp: "910000000000",            // country code + number, no +
+  email: "ravi@experttaxcenter.com",
+  formEndpoint: location.protocol.startsWith("http") ? "/api/enquiry" : ""   // Cloudflare Pages Function (Resend). Empty on local preview
+};
+
+/* ============ Tabs / routing ============ */
+const pages = [...document.querySelectorAll('section.page')];
+function show(tab){
+  if(!document.getElementById(tab)) tab='home';
+  pages.forEach(p=>p.classList.toggle('active',p.id===tab));
+  document.querySelectorAll('.tabs a').forEach(a=>a.classList.toggle('active',a.dataset.tab===tab));
+  document.querySelector('.tabs').classList.remove('open');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('[data-tab]');
+  if(!a) return;
+  e.preventDefault();
+  const t=a.dataset.tab;
+  if(location.hash!=='#'+t){try{history.pushState(null,'','#'+t)}catch(err){}}
+  show(t);
+});
+window.addEventListener('popstate',()=>show(location.hash.slice(1)));
+window.addEventListener('hashchange',()=>show(location.hash.slice(1)));
+show(location.hash.slice(1)||'home');
+try{history.scrollRestoration='manual'}catch(e){}
+window.addEventListener('load',()=>setTimeout(()=>window.scrollTo(0,0),0));
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ============ ITR finder ============ */
+const sel=new Set();
+document.querySelectorAll('#itrChips .chip').forEach(c=>c.addEventListener('click',()=>{
+  const k=c.dataset.k; sel.has(k)?sel.delete(k):sel.add(k); c.classList.toggle('on'); itr();
+}));
+function itr(){
+  const r=document.getElementById('itrResult');
+  if(!sel.size){r.classList.remove('show');return;}
+  let form,why;
+  if(sel.has('company')){form='ITR-6';why='Companies file ITR-6 (unless claiming charitable exemption, which uses ITR-7).';}
+  else if(sel.has('firm')){form='ITR-5 (or ITR-4 for firms on presumptive income)';why='Partnership firms and LLPs file ITR-5. A non-LLP firm with presumptive income up to ₹50 lakh may use ITR-4.';}
+  else if(sel.has('biz')){form='ITR-3';why='Business or professional income with regular books needs ITR-3.';}
+  else if(sel.has('presumptive') && !sel.has('cg') && !sel.has('house2') && !sel.has('foreign') && !sel.has('above50')){form='ITR-4 (Sugam)';why='Presumptive income under 44AD/44ADA with total income up to ₹50 lakh.';}
+  else if(sel.has('presumptive')){form='ITR-3';why='Presumptive income combined with capital gains, multiple properties, foreign assets or income above ₹50 lakh usually moves you to ITR-3.';}
+  else if(sel.has('cg')||sel.has('house2')||sel.has('foreign')||sel.has('above50')){form='ITR-2';why='No business income, but capital gains, more than one house, foreign assets or income above ₹50 lakh. (Small long-term equity gains within the exemption limit may still fit ITR-1 — we\'ll check.)';}
+  else {form='ITR-1 (Sahaj)';why='Salary/pension, one house property and other sources with income up to ₹50 lakh.';}
+  r.innerHTML=`<b>Likely form: ${form}</b><br><span class="muted">${why}</span><br><a href="#enquiry" data-tab="enquiry">Get it filed correctly →</a>`;
+  r.classList.add('show');
+}
+
+/* ============ Financial planner ============ */
+const Q=[
+ {id:'age',cat:'About you',t:'What is your age?',o:[['u25','Under 25'],['25_35','25 – 35'],['35_45','35 – 45'],['45_60','45 – 60'],['60p','60 and above']]},
+ {id:'income',cat:'Earnings',t:'What is your monthly take-home income?',h:'After tax and deductions, from all sources.',o:[[20000,'Below ₹25,000'],[40000,'₹25,000 – ₹50,000'],[75000,'₹50,000 – ₹1,00,000'],[150000,'₹1,00,000 – ₹2,00,000'],[250000,'Above ₹2,00,000']]},
+ {id:'expense',cat:'Expenses',t:'Roughly what share of your income goes on monthly expenses and EMIs?',h:'Rent, groceries, school fees, loan EMIs, bills.',o:[[0.4,'Less than 40%'],[0.55,'40% – 60%'],[0.7,'60% – 80%'],[0.88,'More than 80%']]},
+ {id:'lifestyle',cat:'Lifestyle',t:'How would you describe your lifestyle?',o:[['frugal','Simple — I save whatever I can'],['balanced','Balanced — some spending, some saving'],['comfort','Comfortable — travel, dining out, gadgets'],['irregular','My income is irregular (business / freelance / farming)']]},
+ {id:'emergency',cat:'Savings',t:'Do you have an emergency fund?',h:'Money you can access within a few days if needed.',o:[['none','No savings set aside'],['lt3','Less than 3 months of expenses'],['3to6','3 – 6 months of expenses'],['gt6','More than 6 months']]},
+ {id:'dependents',cat:'Family',t:'Who depends on you financially?',o:[['none','Only myself'],['spouse','Spouse / parents'],['kids','Children'],['girl','Children, including a daughter under 10']]},
+ {id:'regime',cat:'Tax',t:'Which tax regime are you on (or likely to choose)?',h:'Not sure? Pick "Don\'t know" — we\'ll explain.',o:[['old','Old regime — I claim 80C, HRA, home loan'],['new','New regime — lower rates, few deductions'],['none','My income is below the taxable limit'],['dk','Don\'t know']]},
+ {id:'goal',cat:'Goals',t:'What is your main financial goal?',o:[['tax','Save tax this year'],['safe','Keep my money safe with steady returns'],['income','Regular monthly income'],['wealth','Grow wealth over the long term'],['child','Children\'s education / marriage'],['retire','Retirement']]},
+ {id:'horizon',cat:'Time',t:'When will you need this money?',o:[['short','Within 1 – 3 years'],['mid','3 – 7 years'],['long','More than 7 years']]},
+ {id:'risk',cat:'Risk',t:'If your investment fell 15% in a bad year, what would you do?',o:[['low','Sell immediately — I can\'t take losses'],['med','Feel worried, but wait it out'],['high','Stay invested or even invest more']]}
+];
+let qi=0; const A={};
+const $=id=>document.getElementById(id);
+function renderQ(){
+  const q=Q[qi];
+  $('qCount').textContent=`Question ${qi+1} of ${Q.length}`;
+  $('qCat').textContent=q.cat;
+  $('bar').style.width=((qi)/Q.length*100)+'%';
+  $('qTitle').textContent=q.t;
+  $('qHelp').textContent=q.h||'';
+  $('qOpts').innerHTML='';
+  q.o.forEach(([v,l])=>{
+    const b=document.createElement('button');
+    b.className='opt'+(A[q.id]===v?' on':'');
+    b.innerHTML=`<span class="dot"></span>${l}`;
+    b.onclick=()=>{A[q.id]=v;renderQ();setTimeout(()=>{if(qi<Q.length-1){qi++;renderQ();}},180);};
+    $('qOpts').appendChild(b);
+  });
+  $('prevBtn').style.visibility=qi?'visible':'hidden';
+  $('nextBtn').disabled=A[q.id]===undefined;
+  $('nextBtn').textContent=qi===Q.length-1?'See my plan →':'Next →';
+}
+$('prevBtn').onclick=()=>{if(qi){qi--;renderQ();}};
+$('nextBtn').onclick=()=>{if(qi<Q.length-1){qi++;renderQ();}else results();};
+$('restartBtn').onclick=()=>{for(const k in A)delete A[k];qi=0;$('results').style.display='none';$('quiz').style.display='block';renderQ();};
+
+const inr=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+const round500=n=>Math.max(500,Math.round(n/500)*500);
+
+const OPTIONS={
+  efund:{name:'Emergency Fund — Bank FD / Sweep FD or Liquid Fund',risk:'low',tags:['Liquidity','Safety'],
+    why:['Builds a cushion of about 6 months\' expenses before investing elsewhere','Money available within 1–2 days','Use a scheduled bank; avoid locking all of it in long FDs']},
+  ppf:{name:'PPF — Public Provident Fund',risk:'low',tags:['Govt-backed','80C','Tax-free'],
+    why:['Government-backed with tax-free interest and maturity','Qualifies for 80C deduction under the old regime','15-year lock-in suits retirement and children\'s goals; open at any post office or bank']},
+  elss:{name:'ELSS — Tax-Saving Mutual Fund (SIP)',risk:'high',tags:['80C','3-yr lock-in','Equity'],
+    why:['Shortest lock-in (3 years) among 80C options','Equity exposure for higher long-term growth potential','Start a monthly SIP to average out market ups and downs']},
+  sip:{name:'Mutual Fund SIP — Index / Flexi-cap Fund',risk:'high',tags:['Wealth','Flexible'],
+    why:['Low-cost index or flexi-cap fund for long-term wealth','No lock-in; increase SIP as income grows','Best for goals 7+ years away']},
+  hybrid:{name:'Balanced / Hybrid Mutual Fund (SIP)',risk:'med',tags:['Equity + Debt','3–7 yrs'],
+    why:['Mix of equity and debt for smoother returns','Good first step into mutual funds for cautious investors','Suited to 3–7 year goals']},
+  nsc:{name:'Post Office NSC / Time Deposit',risk:'low',tags:['Govt-backed','Fixed returns'],
+    why:['Guaranteed returns backed by the Government of India','5-year NSC qualifies for 80C under the old regime','Available at your nearest post office']},
+  rd:{name:'Post Office / Bank Recurring Deposit',risk:'low',tags:['Monthly habit','Safe'],
+    why:['Builds a disciplined monthly saving habit with small amounts','Fixed, predictable returns','Good for short-term goals like fees or festivals']},
+  mis:{name:'Post Office Monthly Income Scheme (MIS)',risk:'low',tags:['Monthly income','Govt-backed'],
+    why:['Pays interest every month into your savings account','Capital is safe and government-backed','5-year tenure; interest is taxable']},
+  scss:{name:'Senior Citizens\' Savings Scheme (SCSS)',risk:'low',tags:['60+','Quarterly income','80C'],
+    why:['Among the highest safe rates available to senior citizens','Quarterly interest payouts for regular income','Qualifies for 80C under the old regime']},
+  ssy:{name:'Sukanya Samriddhi Yojana',risk:'low',tags:['Girl child','80C','Tax-free'],
+    why:['Dedicated scheme for a daughter under 10','Tax-free interest and maturity; 80C under the old regime','Ideal for her education and marriage goals']},
+  nps:{name:'NPS — National Pension System',risk:'med',tags:['Retirement','Extra ₹50k deduction'],
+    why:['Low-cost retirement product with equity and debt mix','Extra ₹50,000 deduction under 80CCD(1B) in the old regime','Locked till 60 — keeps retirement money untouched']},
+  coop:{name:'Co-operative Bank FD (DICGC-insured only)',risk:'med',tags:['Local','Slightly higher rate'],
+    why:['Co-operative banks often offer slightly higher FD rates','Only use DICGC-insured banks and keep deposits within ₹5 lakh per bank','Avoid uninsured credit societies for your core savings']},
+  gold:{name:'Gold ETF / Gold Mutual Fund',risk:'med',tags:['Diversification'],
+    why:['Adds a hedge against inflation and rupee weakness','Better than jewellery — no making charges or storage risk','Keep to around 5–10% of investments']}
+};
+
+function results(){
+  $('bar').style.width='100%';
+  const income=A.income, ratio=A.expense;
+  let surplus=income*(1-ratio);
+  if(A.lifestyle==='comfort') surplus*=0.85;
+  if(A.lifestyle==='frugal') surplus*=1.1;
+  if(A.lifestyle==='irregular') surplus*=0.8;
+  const expenses=income*ratio;
+  const rate=Math.round(surplus/income*100);
+
+  const s={}; Object.keys(OPTIONS).forEach(k=>s[k]=0);
+  const age=A.age, risk=A.risk, hz=A.horizon, goal=A.goal;
+  const taxOld=A.regime==='old'||A.regime==='dk';
+
+  // emergency fund first
+  if(A.emergency==='none') s.efund+=100;
+  else if(A.emergency==='lt3') s.efund+=60;
+  else if(A.emergency==='3to6') s.efund+=10;
+  if(A.lifestyle==='irregular' && A.emergency!=='gt6') s.efund+=25;
+
+  // risk & horizon
+  const eq = risk==='high'?3:risk==='med'?1.5:0;
+  const hzL = hz==='long'?2:hz==='mid'?1:0;
+  s.sip += eq*12 + hzL*14 - (hz==='short'?40:0);
+  s.elss+= eq*8 + hzL*8 + (taxOld?28:-30) - (hz==='short'?30:0);
+  s.hybrid+= (risk==='med'?30:risk==='high'?10:0) + (hz==='mid'?25:hz==='long'?8:-10);
+  s.ppf += (risk==='low'?22:12) + (hz==='long'?25:-20) + (taxOld?22:0);
+  s.nsc += (risk==='low'?25:6) + (hz==='mid'?18:hz==='short'?4:0) + (taxOld?8:0);
+  s.rd  += (hz==='short'?30:0) + (surplus<10000?22:0) + (risk==='low'?10:0);
+  s.coop+= (risk!=='high'?8:0) + (hz==='short'?10:0) - 5;
+  s.gold+= (hz!=='short'?8:0) + (risk==='med'?6:0);
+  s.nps += (taxOld?12:0) + (age==='35_45'||age==='45_60'?14:age==='25_35'?6:-30);
+
+  // goals
+  ({tax:()=>{s.elss+=35;s.ppf+=25;s.nps+=18;s.nsc+=10;},
+    safe:()=>{s.ppf+=18;s.nsc+=25;s.coop+=8;s.rd+=10;s.sip-=20;},
+    income:()=>{s.mis+=45;s.scss+=20;s.coop+=10;},
+    wealth:()=>{s.sip+=35;s.elss+=10;s.gold+=8;},
+    child:()=>{s.ppf+=20;s.sip+=15;s.ssy+=10;},
+    retire:()=>{s.nps+=30;s.ppf+=20;s.sip+=10;}})[goal]();
+
+  // life stage
+  if(age==='60p'){s.scss+=70;s.mis+=25;s.sip-=25;s.elss-=15;s.nps-=40;s.ppf-=15;}
+  else s.scss=-999;
+  if(age==='u25'){s.sip+=12;s.elss+=6;}
+  if(A.dependents==='girl') s.ssy+=55; else s.ssy=-999;
+  if(goal!=='income' && age!=='60p') s.mis-=10;
+  if(A.regime==='new'||A.regime==='none'){s.elss-=10;}
+  if(surplus<5000){s.rd+=20;s.sip-=10;s.nps-=10;}
+
+  const top=Object.entries(s).sort((a,b)=>b[1]-a[1]).filter(([,v])=>v>0).slice(0,3);
+  const weights=[0.5,0.3,0.2];
+  // if emergency fund is a priority, give it more
+  if(top[0]&&top[0][0]==='efund'&&A.emergency==='none'){weights[0]=0.6;weights[1]=0.25;weights[2]=0.15;}
+
+  // summary
+  $('sumBar').innerHTML=`
+    <div class="stat"><b>${inr(income)}</b><span>Monthly income (approx.)</span></div>
+    <div class="stat"><b>${inr(expenses)}</b><span>Expenses &amp; EMIs</span></div>
+    <div class="stat"><b>${inr(surplus)}</b><span>Investable per month</span></div>
+    <div class="stat"><b>${rate}%</b><span>Savings rate</span></div>`;
+
+  let al='';
+  if(rate<15) al+=`<div class="note warn"><b>Your savings rate is low.</b> Before investing, try to cut expenses or EMIs so you can save at least 20% of income. Even ₹500/month in an RD builds the habit.</div>`;
+  if(A.dependents!=='none') al+=`<div class="note"><b>Protect your family first:</b> make sure you have a term life insurance policy and family health insurance before investing for returns.</div>`;
+  if(A.regime==='dk') al+=`<div class="note"><b>Not sure about your tax regime?</b> We\'ve assumed you might benefit from 80C options. Ravi can compare both regimes for you — it often changes which investments make sense.</div>`;
+  if(A.regime==='new') al+=`<div class="note">On the <b>new regime</b>, 80C investments don\'t reduce your tax, so we\'ve prioritised returns and flexibility over tax deductions.</div>`;
+  $('alerts').innerHTML=al;
+
+  $('recs').innerHTML=top.map(([k],i)=>{
+    const o=OPTIONS[k], amt=round500(surplus*weights[i]);
+    const rl={low:'Low risk',med:'Moderate risk',high:'Market-linked'}[o.risk];
+    return `<div class="card rec">
+      <div class="rec-head">
+        <div><div class="rec-rank">Recommendation ${i+1}</div><h3>${o.name}</h3>
+          <div class="pill-row"><span class="risk ${o.risk}">${rl}</span> ${o.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div>
+        <div class="alloc">${inr(amt)}<small>suggested / month (${Math.round(weights[i]*100)}%)</small></div>
+      </div>
+      <ul>${o.why.map(w=>`<li>${w}</li>`).join('')}</ul>
+    </div>`;
+  }).join('');
+
+  // prefill enquiry
+  const plan=top.map(([k])=>OPTIONS[k].name.split(' — ')[0]).join(', ');
+  $('discussBtn').onclick=()=>{$('f_service').value='Investment / financial guidance';$('f_msg').value=`I used the financial planner. Suggested: ${plan}. Monthly investable approx ${inr(surplus)}. I'd like to discuss this.`;};
+
+  $('quiz').style.display='none';
+  $('results').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+renderQ();
+
+/* ============ Enquiry form ============ */
+const form=$('enqForm');
+const rules={
+  f_name:v=>v.trim().length>1,
+  f_phone:v=>/^(\+?91[\s-]?)?[6-9]\d{9}$/.test(v.replace(/\s/g,'')),
+  f_email:v=>!v||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+  f_city:v=>v.trim().length>1,
+  f_type:v=>!!v, f_service:v=>!!v,
+  f_msg:v=>v.trim().length>4
+};
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  let ok=true;
+  for(const id in rules){const el=$(id),good=rules[id](el.value);el.closest('.field').classList.toggle('bad',!good);if(!good)ok=false;}
+  const c=$('f_consent');c.closest('.field').classList.toggle('bad',!c.checked);if(!c.checked)ok=false;
+  if(!ok){form.querySelector('.bad input,.bad select,.bad textarea')?.focus();return;}
+
+  const data=Object.fromEntries(new FormData(form));
+  const btn=form.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending…';
+  try{
+    if(CONFIG.formEndpoint){
+      const r=await fetch(CONFIG.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
+      if(!r.ok){let m='';try{m=(await r.json()).error||''}catch(_){};throw new Error(m||'send failed');}
+    }
+  }catch(err){btn.disabled=false;btn.textContent='Submit enquiry';btn.insertAdjacentHTML('afterend','<p class="err" style="display:block;margin-top:10px">Sorry, '+(err.message&&err.message!=='send failed'?err.message:'something went wrong')+'. Please try WhatsApp or call instead.</p>');return;}
+
+  const txt=`Hello Ravi, I'm ${data.name} from ${data.city} (${data.client_type}). Service: ${data.service}. ${data.message}`;
+  $('waFollow').href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(txt)}`;
+  form.style.display='none';$('enqSuccess').classList.add('show');
+});
+form.querySelectorAll('input,select,textarea').forEach(el=>el.addEventListener('input',()=>el.closest('.field')?.classList.remove('bad')));
+
+
+</script>
+</body>
+</html>
