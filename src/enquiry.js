@@ -53,7 +53,12 @@ export async function handleEnquiry(request, env) {
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   });
-  if (!r.ok) return json({ ok: false, error: 'Could not send right now' }, 502);
+  if (!r.ok) {
+    let detail = '';
+    try { detail = await r.text(); } catch {}
+    console.error('Resend error', r.status, detail); // visible in Cloudflare > experttaxcenter > Observability > Logs
+    return json({ ok: false, error: 'could not send right now' }, 502);
+  }
   return json({ ok: true });
 }
 
