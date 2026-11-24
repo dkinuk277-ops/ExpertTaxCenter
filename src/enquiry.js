@@ -103,7 +103,11 @@ export async function handleEnquiry(request, env, ctx) {
   // 1) Enquiry to the inbox (must succeed)
   const owner = { from: FROM, to: TO.split(',').map((s) => s.trim()).filter(Boolean), subject: `New enquiry: ${name} — ${d.service || 'General'}`, html };
   if (email) owner.reply_to = email;
-  const ok = await sendEmail(env, owner, 'enquiry');
+  let ok = await sendEmail(env, owner, 'enquiry');
+  if (!ok && env.FROM_EMAIL) {
+    // FROM_EMAIL's domain may not be verified in Resend yet: retry with Resend's test sender so the enquiry still arrives
+    ok = await sendEmail(env, { ...owner, from: 'Expert Tax Center <onboarding@resend.dev>' }, 'enquiry-fallback');
+  }
   if (!ok) return json({ ok: false, error: 'could not send right now' }, 502);
 
   // 2) Best-effort extras: thank-you email to the client + WhatsApp alert to Ravi

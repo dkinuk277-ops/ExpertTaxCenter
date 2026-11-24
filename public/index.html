@@ -1002,7 +1002,7 @@ form.addEventListener('submit',async e=>{
       const r=await fetch(CONFIG.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
       if(!r.ok){let m='';try{m=(await r.json()).error||''}catch(_){};throw new Error(m||'send failed');}
     }
-  }catch(err){btn.disabled=false;btn.textContent='Submit enquiry';btn.insertAdjacentHTML('afterend','<p class="err" style="display:block;margin-top:10px">Sorry, '+(err.message&&err.message!=='send failed'?err.message:'something went wrong')+'. Please try WhatsApp or call instead.</p>');return;}
+  }catch(err){btn.disabled=false;btn.textContent='Submit enquiry';form.querySelectorAll('.send-err').forEach(e=>e.remove());btn.insertAdjacentHTML('afterend','<p class="err send-err" style="display:block;margin-top:10px">Sorry, '+(err.message&&err.message!=='send failed'?err.message:'something went wrong')+'. Please try WhatsApp or call instead.</p>');return;}
 
   const txt=`Hello Ravi, I'm ${data.name} from ${data.city} (${data.client_type}). Mobile: ${data.phone}. Service: ${data.service}. ${data.message}`;
   $('waFollow').href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(txt)}`;
