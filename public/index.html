@@ -397,6 +397,13 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
 @media(max-width:860px){.offerA{grid-template-columns:1fr;text-align:left}}
 
 .ticker-foot{border-bottom:0;border-top:1px solid rgba(0,0,0,.15)}
+
+.contact-card{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;padding:26px 28px;border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0) 42%),linear-gradient(160deg,var(--tile-a),var(--tile-b));border:1px solid var(--tile-line);box-shadow:inset 0 1px 0 var(--tile-hi),0 12px 32px var(--tile-shadow)}
+.contact-card h3{font-size:1.4rem;margin:4px 0 4px}
+.contact-card .muted{margin:0}
+.contact-card .contact-list a{color:var(--ink)}
+@media(max-width:700px){.contact-card{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -836,17 +843,14 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
 </section>
 </main>
 
-<!-- ================= PROFILE CARD (all pages) ================= -->
-<section style="padding:0 0 56px">
+<!-- ================= CONTACT CARD (home + enquiry only) ================= -->
+<section id="contactCard" style="padding:0 0 56px">
   <div class="wrap">
-    <div class="profile">
-      <div class="avatar">RK</div>
+    <div class="contact-card">
       <div>
-        <span class="eyebrow">Your tax expert</span>
-        <h3>Ravi Kumar</h3>
-        <div class="role">Tax Consultant &amp; Financial Advisor</div>
-        <p class="muted">Helping individuals, families and businesses across India file accurate returns, stay compliant and make sensible savings decisions. Straight answers, no jargon.</p>
-        <div class="pill-row"><span class="tag">Income Tax</span><span class="tag">GST</span><span class="tag">TDS</span><span class="tag">Tax Planning</span><span class="tag">Savings Guidance</span></div>
+        <span class="eyebrow">Contact us</span>
+        <h3>Talk to a tax expert</h3>
+        <p class="muted">Questions about your tax return, notices or savings? Reach us directly.</p>
       </div>
       <ul class="contact-list">
         <li><span class="ci">📞</span><a href="tel:+918073379821" id="pPhone">+91 80733 79821</a></li>
@@ -889,6 +893,7 @@ const pages = [...document.querySelectorAll('section.page')];
 function show(tab){
   if(!document.getElementById(tab)) tab='home';
   pages.forEach(p=>p.classList.toggle('active',p.id===tab));
+  const cc=document.getElementById('contactCard');if(cc)cc.style.display=(tab==='home'||tab==='enquiry')?'':'none';
   document.querySelectorAll('.tabs a').forEach(a=>a.classList.toggle('active',a.dataset.tab===tab));
   document.querySelector('.tabs').classList.remove('open');
   window.scrollTo({top:0,behavior:'instant'});
