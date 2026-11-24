@@ -73,11 +73,11 @@ header{position:sticky;top:0;z-index:50;background:var(--header);backdrop-filter
 .hero-card li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;gap:10px}
 .hero-card li:last-child{border:0}
 .tick{color:var(--gold);font-weight:700}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
 .stat b{font-family:'Fraunces',serif;font-size:1.35rem;color:var(--green);line-height:1.25;display:block}
 .stat span{display:block;font-size:.85rem;color:var(--muted)}
-@media(max-width:860px){.hero{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.stats{grid-template-columns:1fr}}
 
 /* Grids & cards */
 .grid{display:grid;gap:18px}
@@ -345,12 +345,11 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
 .ptile i{font-style:normal;font-size:1.5rem;display:block;margin-bottom:6px}
 .ptile b{display:block;font-size:1rem}
 .ptile small{color:var(--panel-sub);font-size:.8rem}
-.panel-foot{display:flex;align-items:center;gap:12px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.18)}
-.panel-foot b{display:block;font-size:.95rem}
-.panel-foot small{color:var(--panel-sub);font-size:.78rem}
-.panel-foot .btn{margin-left:auto}
 .mini-av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-family:'Fraunces',serif;flex:none}
 
+.next-steps{max-width:420px;margin:22px auto 0;text-align:left;padding:18px 20px;border-radius:14px;background:var(--green-soft);border:1px solid var(--tile-line)}
+.next-steps h4{font-family:'Fraunces',serif;font-size:1.05rem;margin-bottom:8px;color:var(--ink)}
+.next-steps ol{margin:0 0 0 20px;color:var(--ink-2);line-height:1.9}
 </style>
 </head>
 <body>
@@ -390,7 +389,7 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
           <a class="btn btn-ghost" href="#planner" data-tab="planner">Free savings planner</a>
         </div>
         <ul class="trust">
-          <li>✓ ITR-1 to ITR-7</li><li>✓ GST &amp; TDS</li><li>✓ Pan-India, online</li><li>✓ Kannada · English · Hindi</li>
+          <li>✓ ITR-1 to ITR-7</li><li>✓ GST &amp; TDS</li><li>✓ Pan-India, online</li>
         </ul>
       </div>
       <div class="hero2-panel">
@@ -401,7 +400,6 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
           <a class="ptile" href="#clients" data-tab="clients"><i>🏪</i><b>Business &amp; GST</b><small>Shops, firms, SMEs</small></a>
           <a class="ptile" href="#planner" data-tab="planner"><i>📈</i><b>Grow savings</b><small>PPF, ELSS, MF &amp; more</small></a>
         </div>
-        <div class="panel-foot"><span class="mini-av">RK</span><div><b>Ravi Kumar</b><small>Tax &amp; Finance Advisor</small></div><a class="btn btn-primary btn-sm" href="#enquiry" data-tab="enquiry">Talk to Ravi</a></div>
       </div>
     </div>
 
@@ -409,7 +407,6 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
       <div class="stat"><b>All ITRs</b><span>ITR-1 to ITR-7 handled</span></div>
       <div class="stat"><b>Pan-India</b><span>In-person &amp; online consultations</span></div>
       <div class="stat"><b>Individuals → SMEs</b><span>One consultant, every stage</span></div>
-      <div class="stat"><b>Kannada · English · Hindi</b><span>Talk in your language</span></div>
     </div>
 
     <div class="block">
@@ -694,6 +691,7 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
           <div class="big">✅</div>
           <h3>Thank you! Your enquiry has been received.</h3>
           <p class="muted">Ravi will contact you within one working day.</p>
+          <div class="next-steps"><h4>What happens next?</h4><ol><li>We call you to understand your case</li><li>You get a document checklist and fee quote</li><li>Work starts once you confirm</li></ol></div>
         </div>
       </div>
 
@@ -705,10 +703,6 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
         <div class="card" style="margin-bottom:18px">
           <h3>Office hours</h3>
           <p>Mon – Sat: 10:00 am – 7:00 pm<br>Sunday: by appointment<br><span class="muted">Extended hours during July filing season</span></p>
-        </div>
-        <div class="card">
-          <h3>What happens next?</h3>
-          <p>1. We call you to understand your case<br>2. You get a document checklist and fee quote<br>3. Work starts once you confirm</p>
         </div>
       </div>
     </div>
@@ -731,7 +725,6 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
       <ul class="contact-list">
         <li><span class="ci">📞</span><a href="tel:+918073379821" id="pPhone">+91 80733 79821</a></li>
         <li><span class="ci">✉️</span><a href="mailto:experttaxcenter@gmail.com" id="pEmail">experttaxcenter@gmail.com</a></li>
-        <li><span class="ci">💬</span><a href="https://wa.me/918073379821" target="_blank" rel="noopener">WhatsApp</a></li>
       </ul>
     </div>
   </div>
