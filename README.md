@@ -5,4 +5,4 @@ Website for Expert Tax Center (Ravi Kumar) — income tax, GST and financial gui
 - Static site in `public/` (`index.html`, single page, tabbed)
 - `src/worker.js` serves the site and handles `POST /api/enquiry` (sends enquiries via Resend, `src/enquiry.js`)
 - Hosting: Cloudflare Workers project `experttaxcenter`, connected to this repo. Every push to `main` builds and deploys (`wrangler.jsonc`)
-- Secrets (Cloudflare > experttaxcenter > Settings > Variables and Secrets): `RESEND_API_KEY` (required), `TO_EMAIL`, `FROM_EMAIL` (optional)
+- Settings (Cloudflare > experttaxcenter > Settings > Variables and Secrets): `RESEND_API_KEY` (secret, required); `TO_EMAIL`, `FROM_EMAIL` (needed for client thank-you emails); `CALLMEBOT_APIKEY` (secret, enables WhatsApp alerts), `WHATSAPP_PHONE`, `SITE_URL` (optional)
