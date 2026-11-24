@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Expert Tax Center | ITR Filing, GST & Financial Advisory — Ravi Kumar</title>
 <link rel="canonical" href="https://experttaxcenter.com/">
-<meta name="description" content="Income tax filing, ITR guidance, GST and tax planning for individuals, small and mid-size businesses across India. Plus a free financial planner for savings and investment ideas.">
+<meta name="description" content="Income tax filing, ITR guidance, GST and tax planning for individuals, small and mid-size businesses across India. Plus savings and investment ideas for every stage of life.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -350,6 +350,23 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
 .next-steps{max-width:420px;margin:22px auto 0;text-align:left;padding:18px 20px;border-radius:14px;background:var(--green-soft);border:1px solid var(--tile-line)}
 .next-steps h4{font-family:'Fraunces',serif;font-size:1.05rem;margin-bottom:8px;color:var(--ink)}
 .next-steps ol{margin:0 0 0 20px;color:var(--ink-2);line-height:1.9}
+
+/* scenarios */
+.scen{display:flex;flex-direction:column}
+.scen-head{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
+.scen-ic{font-size:1.6rem;width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:14px;background:var(--green-soft);border:1px solid var(--tile-line)}
+.scen h3{font-size:1.08rem;margin:0 0 2px}
+.scen-who{font-size:.82rem;color:var(--muted)!important;margin:0}
+.mixbar{display:flex;height:12px;border-radius:99px;overflow:hidden;gap:2px;margin:4px 0 12px;background:rgba(255,255,255,.06)}
+.mixbar span{display:block;height:100%}
+.mixleg{list-style:none;display:grid;gap:6px;margin-bottom:12px;font-size:.88rem;color:var(--ink)}
+.mixleg li{display:flex;align-items:center;gap:8px}
+.mixleg i{width:10px;height:10px;border-radius:3px;flex:none}
+.mixleg b{color:var(--accent);min-width:38px}
+.scen-why{margin:0 0 14px 18px;font-size:.88rem;color:var(--ink-2);line-height:1.55}
+.scen-why li{margin-bottom:6px}
+.scen-foot{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto;margin-bottom:12px}
+.scen-ask{align-self:flex-start}
 </style>
 </head>
 <body>
@@ -366,7 +383,7 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
       <li><a href="#services" data-tab="services">Tax Services</a></li>
       <li><a href="#itr" data-tab="itr">ITR Guide</a></li>
       <li><a href="#clients" data-tab="clients">Who We Serve</a></li>
-      <li><a href="#planner" data-tab="planner">Financial Planner</a></li>
+      <li><a href="#planner" data-tab="planner">Financial Services</a></li>
       <li><a href="#investments" data-tab="investments">Investments</a></li>
       <li><a href="#enquiry" data-tab="enquiry">Enquiry</a></li>
     </ul>
@@ -386,7 +403,7 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
         <p class="lead" style="margin-top:16px">Trusted income tax, GST and savings advice for individuals, families and growing businesses across India. File correctly, pay only what you owe, and put your savings to work.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="#enquiry" data-tab="enquiry">Book a consultation →</a>
-          <a class="btn btn-ghost" href="#planner" data-tab="planner">Free savings planner</a>
+          <a class="btn btn-ghost" href="#planner" data-tab="planner">Investment ideas</a>
         </div>
         <ul class="trust">
           <li>✓ ITR-1 to ITR-7</li><li>✓ GST &amp; TDS</li><li>✓ Pan-India, online</li>
@@ -421,8 +438,8 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
         <div class="card">
           <div class="icon">📈</div>
           <h3>Savings &amp; Investment Guidance</h3>
-          <p>Answer a few questions about your earnings, expenses and goals, and get 2–3 suggestions across PPF, Post Office schemes, bank FDs, ELSS and mutual funds.</p>
-          <div class="btn-row"><a class="btn btn-ghost" href="#planner" data-tab="planner">Start the planner</a></div>
+          <p>See sample savings plans for 9 real-life situations, from first job to retirement, across PPF, Post Office schemes, bank FDs, ELSS, NPS and mutual funds.</p>
+          <div class="btn-row"><a class="btn btn-ghost" href="#planner" data-tab="planner">Explore investment ideas</a></div>
         </div>
       </div>
     </div>
@@ -582,38 +599,98 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
 <!-- ================= PLANNER ================= -->
 <section class="page" id="planner">
   <div class="wrap">
-    <div class="planner">
-      <div style="text-align:center">
-        <span class="eyebrow">Free financial planner</span>
-        <h2>Where should your savings go?</h2>
-        <p class="lead" style="margin:0 auto">Answer 10 quick questions about your income, expenses and goals. You'll get 2–3 suggestions that suit your lifestyle and help you save tax.</p>
-      </div>
-
-      <div id="quiz">
-        <div class="progress"><div id="bar"></div></div>
-        <div class="q-meta"><span id="qCount">Question 1 of 10</span><span id="qCat"></span></div>
-        <div class="q-card">
-          <h3 id="qTitle"></h3>
-          <p class="muted" id="qHelp"></p>
-          <div class="opts" id="qOpts"></div>
-          <div class="q-nav">
-            <button class="btn btn-ghost" id="prevBtn">← Back</button>
-            <button class="btn btn-primary" id="nextBtn" disabled>Next →</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="results" style="display:none">
-        <div class="summary-bar" id="sumBar"></div>
-        <div id="alerts"></div>
-        <h3 style="margin:20px 0 14px">Your top recommendations</h3>
-        <div id="recs"></div>
-        <div class="note">These are general, educational suggestions based on your answers — not personalised investment advice. Interest rates for PPF and Post Office schemes are set by the government each quarter; mutual fund returns are not guaranteed. Speak to Ravi before investing.</div>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#enquiry" data-tab="enquiry" id="discussBtn">Discuss this plan with Ravi →</a>
-          <button class="btn btn-ghost" id="restartBtn">Start again</button>
-        </div>
-      </div>
+    <div class="section-head" style="text-align:center">
+      <span class="eyebrow">Financial services</span>
+      <h2>Your money, planned with care, at every stage of life.</h2>
+      <p class="lead" style="margin:0 auto">Find the situation closest to yours to see a sample savings mix, why it works, and how it affects your tax. Every plan can be tailored to your numbers.</p>
+      <div class="btn-row" style="justify-content:center;margin-top:20px"><button class="btn btn-primary" id="freeConsult">Get your free consultation →</button></div>
+    </div>
+    <div class="chips scen-filter" style="justify-content:center">
+      <button class="chip on" data-f="all">All scenarios</button>
+      <button class="chip" data-f="tax">Save tax</button>
+      <button class="chip" data-f="safe">Safe &amp; guaranteed</button>
+      <button class="chip" data-f="growth">Long-term growth</button>
+      <button class="chip" data-f="income">Regular income</button>
+      <button class="chip" data-f="family">Family &amp; children</button>
+    </div>
+    <div class="grid g3 scen-grid">
+        <article class="card scen" data-cat="growth tax">
+          <div class="scen-head"><span class="scen-ic">🎓</span><div><h3>First job, just started earning</h3><p class="scen-who">Age 22–30 · salaried or freelancer · few responsibilities</p></div></div>
+          <div class="mixbar"><span style="width:30%;background:#7fd3f2" title="Emergency fund (savings / liquid fund) 30%"></span><span style="width:35%;background:#8fb0ff" title="ELSS tax-saving SIP 35%"></span><span style="width:35%;background:#5ad1a8" title="Index fund SIP 35%"></span></div>
+          <ul class="mixleg"><li><i style="background:#7fd3f2"></i><b>30%</b> Emergency fund (savings / liquid fund)</li><li><i style="background:#8fb0ff"></i><b>35%</b> ELSS tax-saving SIP</li><li><i style="background:#5ad1a8"></i><b>35%</b> Index fund SIP</li></ul>
+          <ul class="scen-why"><li>Build 3–6 months of expenses first, so a surprise bill never forces you to borrow</li><li>Long time horizon suits equity, so start small SIPs and raise them with each pay rise</li><li>ELSS gives 80C tax saving (old regime) with the shortest 3-year lock-in</li></ul>
+          <div class="scen-foot"><span class="risk med">Moderate risk</span><span class="tag">80C via ELSS (old regime)</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="First job, just started earning">Discuss this plan →</button>
+        </article>
+        <article class="card scen" data-cat="tax">
+          <div class="scen-head"><span class="scen-ic">🧮</span><div><h3>Salaried, want to save tax (old regime)</h3><p class="scen-who">Claim 80C, HRA or home-loan benefits · steady salary</p></div></div>
+          <div class="mixbar"><span style="width:40%;background:#f2c14e" title="PPF 40%"></span><span style="width:40%;background:#8fb0ff" title="ELSS SIP 40%"></span><span style="width:20%;background:#c39bff" title="NPS (extra ₹50,000 deduction) 20%"></span></div>
+          <ul class="mixleg"><li><i style="background:#f2c14e"></i><b>40%</b> PPF</li><li><i style="background:#8fb0ff"></i><b>40%</b> ELSS SIP</li><li><i style="background:#c39bff"></i><b>20%</b> NPS (extra ₹50,000 deduction)</li></ul>
+          <ul class="scen-why"><li>Use the ₹1.5 lakh 80C limit with a safe (PPF) and growth (ELSS) mix</li><li>NPS under 80CCD(1B) gives an extra deduction beyond 80C</li><li>Compare with the new regime every year; we do this for you while filing</li></ul>
+          <div class="scen-foot"><span class="risk med">Moderate risk</span><span class="tag">80C + 80CCD(1B)</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="Salaried, want to save tax (old regime)">Discuss this plan →</button>
+        </article>
+        <article class="card scen" data-cat="growth">
+          <div class="scen-head"><span class="scen-ic">📊</span><div><h3>On the new tax regime</h3><p class="scen-who">Few deductions to claim · want simple, flexible investing</p></div></div>
+          <div class="mixbar"><span style="width:50%;background:#5ad1a8" title="Index / flexi-cap fund SIP 50%"></span><span style="width:30%;background:#f2c14e" title="PPF (safe, tax-free returns) 30%"></span><span style="width:20%;background:#ff9a62" title="Gold ETF / gold fund 20%"></span></div>
+          <ul class="mixleg"><li><i style="background:#5ad1a8"></i><b>50%</b> Index / flexi-cap fund SIP</li><li><i style="background:#f2c14e"></i><b>30%</b> PPF (safe, tax-free returns)</li><li><i style="background:#ff9a62"></i><b>20%</b> Gold ETF / gold fund</li></ul>
+          <ul class="scen-why"><li>80C investments don&#x27;t cut tax in the new regime, so focus on returns and flexibility</li><li>PPF still makes sense for safe, tax-free long-term savings</li><li>Employer NPS contributions remain deductible in both regimes; check with HR</li></ul>
+          <div class="scen-foot"><span class="risk med">Moderate risk</span><span class="tag">Little deduction benefit; tax-free PPF interest</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="On the new tax regime">Discuss this plan →</button>
+        </article>
+        <article class="card scen" data-cat="family tax">
+          <div class="scen-head"><span class="scen-ic">👧</span><div><h3>Parents of a young daughter</h3><p class="scen-who">Daughter under 10 · planning for education and marriage</p></div></div>
+          <div class="mixbar"><span style="width:45%;background:#ff8fb1" title="Sukanya Samriddhi Yojana 45%"></span><span style="width:35%;background:#5ad1a8" title="Children&#x27;s goal SIP (equity) 35%"></span><span style="width:20%;background:#f2c14e" title="PPF 20%"></span></div>
+          <ul class="mixleg"><li><i style="background:#ff8fb1"></i><b>45%</b> Sukanya Samriddhi Yojana</li><li><i style="background:#5ad1a8"></i><b>35%</b> Children&#x27;s goal SIP (equity)</li><li><i style="background:#f2c14e"></i><b>20%</b> PPF</li></ul>
+          <ul class="scen-why"><li>SSY is a government scheme for girls under 10, with tax-free interest and maturity</li><li>A long-term SIP adds growth for college costs that rise faster than inflation</li><li>Make sure term life and health cover are in place first</li></ul>
+          <div class="scen-foot"><span class="risk low">Low risk</span><span class="tag">80C (old regime); tax-free SSY/PPF</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="Parents of a young daughter">Discuss this plan →</button>
+        </article>
+        <article class="card scen" data-cat="safe">
+          <div class="scen-head"><span class="scen-ic">🛡️</span><div><h3>Safety first, guaranteed returns</h3><p class="scen-who">Don&#x27;t want market ups and downs · want capital protected</p></div></div>
+          <div class="mixbar"><span style="width:40%;background:#ffb27a" title="Post Office NSC / Time Deposit 40%"></span><span style="width:35%;background:#7fd3f2" title="Bank FD (scheduled bank) 35%"></span><span style="width:25%;background:#f2c14e" title="PPF 25%"></span></div>
+          <ul class="mixleg"><li><i style="background:#ffb27a"></i><b>40%</b> Post Office NSC / Time Deposit</li><li><i style="background:#7fd3f2"></i><b>35%</b> Bank FD (scheduled bank)</li><li><i style="background:#f2c14e"></i><b>25%</b> PPF</li></ul>
+          <ul class="scen-why"><li>Government-backed Post Office schemes and PPF protect your capital</li><li>Spread FDs across banks; deposits are insured up to ₹5 lakh per bank (DICGC)</li><li>Co-operative bank FDs only if DICGC-insured; avoid uninsured credit societies</li></ul>
+          <div class="scen-foot"><span class="risk low">Low risk</span><span class="tag">NSC &amp; 5-yr tax-saver FD qualify for 80C (old regime)</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="Safety first, guaranteed returns">Discuss this plan →</button>
+        </article>
+        <article class="card scen" data-cat="safe family">
+          <div class="scen-head"><span class="scen-ic">🌾</span><div><h3>Irregular income: farmers, traders, small shops</h3><p class="scen-who">Income comes in seasons or varies month to month</p></div></div>
+          <div class="mixbar"><span style="width:40%;background:#7fd3f2" title="Emergency fund (savings / sweep FD) 40%"></span><span style="width:35%;background:#a3b1d6" title="Recurring deposit (Post Office / bank) 35%"></span><span style="width:25%;background:#f2c14e" title="PPF (flexible yearly deposits) 25%"></span></div>
+          <ul class="mixleg"><li><i style="background:#7fd3f2"></i><b>40%</b> Emergency fund (savings / sweep FD)</li><li><i style="background:#a3b1d6"></i><b>35%</b> Recurring deposit (Post Office / bank)</li><li><i style="background:#f2c14e"></i><b>25%</b> PPF (flexible yearly deposits)</li></ul>
+          <ul class="scen-why"><li>A bigger cushion smooths out lean months</li><li>RDs build a habit with small, regular amounts in good months</li><li>PPF lets you deposit any amount from ₹500 a year, whenever cash is available</li></ul>
+          <div class="scen-foot"><span class="risk low">Low risk</span><span class="tag">PPF under 80C (old regime)</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="Irregular income: farmers, traders, small shops">Discuss this plan →</button>
+        </article>
+        <article class="card scen" data-cat="growth tax">
+          <div class="scen-head"><span class="scen-ic">🏪</span><div><h3>Self-employed or small business owner</h3><p class="scen-who">No employer PF or pension · business and personal money mixed</p></div></div>
+          <div class="mixbar"><span style="width:30%;background:#7fd3f2" title="Business + personal emergency fund 30%"></span><span style="width:30%;background:#c39bff" title="NPS for retirement 30%"></span><span style="width:40%;background:#5ad1a8" title="Flexi-cap fund SIP 40%"></span></div>
+          <ul class="mixleg"><li><i style="background:#7fd3f2"></i><b>30%</b> Business + personal emergency fund</li><li><i style="background:#c39bff"></i><b>30%</b> NPS for retirement</li><li><i style="background:#5ad1a8"></i><b>40%</b> Flexi-cap fund SIP</li></ul>
+          <ul class="scen-why"><li>Keep business and personal reserves separate so one doesn&#x27;t drain the other</li><li>Without an employer pension, NPS builds a disciplined retirement fund</li><li>A monthly SIP grows long-term wealth outside the business</li></ul>
+          <div class="scen-foot"><span class="risk med">Moderate risk</span><span class="tag">NPS 80CCD(1) &amp; (1B) (old regime)</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="Self-employed or small business owner">Discuss this plan →</button>
+        </article>
+        <article class="card scen" data-cat="safe growth">
+          <div class="scen-head"><span class="scen-ic">⏳</span><div><h3>Nearing retirement (45–60)</h3><p class="scen-who">Peak earning years · want growth but less volatility</p></div></div>
+          <div class="mixbar"><span style="width:40%;background:#6fa8ff" title="Balanced / hybrid fund 40%"></span><span style="width:30%;background:#c39bff" title="NPS 30%"></span><span style="width:30%;background:#f2c14e" title="PPF (extend in 5-year blocks) 30%"></span></div>
+          <ul class="mixleg"><li><i style="background:#6fa8ff"></i><b>40%</b> Balanced / hybrid fund</li><li><i style="background:#c39bff"></i><b>30%</b> NPS</li><li><i style="background:#f2c14e"></i><b>30%</b> PPF (extend in 5-year blocks)</li></ul>
+          <ul class="scen-why"><li>Shift gradually from pure equity towards balanced funds to protect gains</li><li>NPS and PPF add tax-efficient, steady retirement savings</li><li>Plan a regular-income setup for the year you retire</li></ul>
+          <div class="scen-foot"><span class="risk med">Moderate risk</span><span class="tag">80C + 80CCD(1B) (old regime)</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="Nearing retirement (45–60)">Discuss this plan →</button>
+        </article>
+        <article class="card scen" data-cat="income safe">
+          <div class="scen-head"><span class="scen-ic">🧓</span><div><h3>Retired, need regular monthly income</h3><p class="scen-who">Age 60+ · want safe, predictable payouts</p></div></div>
+          <div class="mixbar"><span style="width:45%;background:#9be07a" title="Senior Citizens&#x27; Savings Scheme 45%"></span><span style="width:30%;background:#ffb27a" title="Post Office Monthly Income Scheme 30%"></span><span style="width:25%;background:#7fd3f2" title="Senior-citizen bank FD 25%"></span></div>
+          <ul class="mixleg"><li><i style="background:#9be07a"></i><b>45%</b> Senior Citizens&#x27; Savings Scheme</li><li><i style="background:#ffb27a"></i><b>30%</b> Post Office Monthly Income Scheme</li><li><i style="background:#7fd3f2"></i><b>25%</b> Senior-citizen bank FD</li></ul>
+          <ul class="scen-why"><li>SCSS pays interest every quarter and is among the highest safe options for seniors</li><li>POMIS pays monthly into your savings account</li><li>Keep 6–12 months of expenses easily accessible for health needs</li></ul>
+          <div class="scen-foot"><span class="risk low">Low risk</span><span class="tag">SCSS under 80C; interest is taxable, so plan TDS forms</span></div>
+          <button class="btn btn-ghost btn-sm scen-ask" data-title="Retired, need regular monthly income">Discuss this plan →</button>
+        </article>
+    </div>
+    <div class="note" style="margin-top:26px">These are general, educational examples, not personalised investment advice. Percentages show how a monthly saving amount could be split, after your emergency fund and insurance are in place. PPF, Post Office and SSY rates are set by the government each quarter; mutual fund returns are not guaranteed. Mutual fund investments are subject to market risks; read all scheme-related documents carefully.</div>
+    <div class="banner">
+      <div><h3>Want a plan built on your own numbers?</h3><p class="muted">Tell us your income, goals and tax regime, and we'll suggest the right mix.</p></div>
+      <a class="btn btn-gold" href="#enquiry" data-tab="enquiry">Talk to our tax expert</a>
     </div>
   </div>
 </section>
@@ -653,8 +730,8 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
     </div>
 
     <div class="banner">
-      <div><h3>Want suggestions based on your own numbers?</h3><p class="muted">Takes about 2 minutes.</p></div>
-      <a class="btn btn-gold" href="#planner" data-tab="planner">Open the planner</a>
+      <div><h3>Not sure which mix suits you?</h3><p class="muted">See sample plans for 9 common situations.</p></div>
+      <a class="btn btn-gold" href="#planner" data-tab="planner">See investment ideas</a>
     </div>
   </div>
 </section>
@@ -735,7 +812,7 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
     <div class="foot-grid">
       <div><h4>Expert Tax Center</h4><p>Tax consultancy and financial guidance for individuals and businesses across India.</p></div>
       <div><h4>Tax</h4><ul><li><a data-tab="services">Tax services</a></li><li><a data-tab="itr">ITR guide</a></li><li><a data-tab="clients">Who we serve</a></li></ul></div>
-      <div><h4>Money</h4><ul><li><a data-tab="planner">Financial planner</a></li><li><a data-tab="investments">Investment options</a></li><li><a data-tab="enquiry">Enquiry</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div>
+      <div><h4>Money</h4><ul><li><a data-tab="planner">Financial services</a></li><li><a data-tab="investments">Investment options</a></li><li><a data-tab="enquiry">Enquiry</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms &amp; Conditions</a></li></ul></div>
     </div>
     <div class="disclaimer">
       © <span id="yr"></span> Expert Tax Center (experttaxcenter.com) · Ravi Kumar. All rights reserved. · <a href="privacy.html" style="color:var(--gold);text-decoration:underline">Privacy Policy</a> · <a href="terms.html" style="color:var(--gold);text-decoration:underline">Terms &amp; Conditions</a><br>
@@ -798,167 +875,25 @@ function itr(){
   r.classList.add('show');
 }
 
-/* ============ Financial planner ============ */
-const Q=[
- {id:'age',cat:'About you',t:'What is your age?',o:[['u25','Under 25'],['25_35','25 – 35'],['35_45','35 – 45'],['45_60','45 – 60'],['60p','60 and above']]},
- {id:'income',cat:'Earnings',t:'What is your monthly take-home income?',h:'After tax and deductions, from all sources.',o:[[20000,'Below ₹25,000'],[40000,'₹25,000 – ₹50,000'],[75000,'₹50,000 – ₹1,00,000'],[150000,'₹1,00,000 – ₹2,00,000'],[250000,'Above ₹2,00,000']]},
- {id:'expense',cat:'Expenses',t:'Roughly what share of your income goes on monthly expenses and EMIs?',h:'Rent, groceries, school fees, loan EMIs, bills.',o:[[0.4,'Less than 40%'],[0.55,'40% – 60%'],[0.7,'60% – 80%'],[0.88,'More than 80%']]},
- {id:'lifestyle',cat:'Lifestyle',t:'How would you describe your lifestyle?',o:[['frugal','Simple — I save whatever I can'],['balanced','Balanced — some spending, some saving'],['comfort','Comfortable — travel, dining out, gadgets'],['irregular','My income is irregular (business / freelance / farming)']]},
- {id:'emergency',cat:'Savings',t:'Do you have an emergency fund?',h:'Money you can access within a few days if needed.',o:[['none','No savings set aside'],['lt3','Less than 3 months of expenses'],['3to6','3 – 6 months of expenses'],['gt6','More than 6 months']]},
- {id:'dependents',cat:'Family',t:'Who depends on you financially?',o:[['none','Only myself'],['spouse','Spouse / parents'],['kids','Children'],['girl','Children, including a daughter under 10']]},
- {id:'regime',cat:'Tax',t:'Which tax regime are you on (or likely to choose)?',h:'Not sure? Pick "Don\'t know" — we\'ll explain.',o:[['old','Old regime — I claim 80C, HRA, home loan'],['new','New regime — lower rates, few deductions'],['none','My income is below the taxable limit'],['dk','Don\'t know']]},
- {id:'goal',cat:'Goals',t:'What is your main financial goal?',o:[['tax','Save tax this year'],['safe','Keep my money safe with steady returns'],['income','Regular monthly income'],['wealth','Grow wealth over the long term'],['child','Children\'s education / marriage'],['retire','Retirement']]},
- {id:'horizon',cat:'Time',t:'When will you need this money?',o:[['short','Within 1 – 3 years'],['mid','3 – 7 years'],['long','More than 7 years']]},
- {id:'risk',cat:'Risk',t:'If your investment fell 15% in a bad year, what would you do?',o:[['low','Sell immediately — I can\'t take losses'],['med','Feel worried, but wait it out'],['high','Stay invested or even invest more']]}
-];
-let qi=0; const A={};
 const $=id=>document.getElementById(id);
-function renderQ(){
-  const q=Q[qi];
-  $('qCount').textContent=`Question ${qi+1} of ${Q.length}`;
-  $('qCat').textContent=q.cat;
-  $('bar').style.width=((qi)/Q.length*100)+'%';
-  $('qTitle').textContent=q.t;
-  $('qHelp').textContent=q.h||'';
-  $('qOpts').innerHTML='';
-  q.o.forEach(([v,l])=>{
-    const b=document.createElement('button');
-    b.className='opt'+(A[q.id]===v?' on':'');
-    b.innerHTML=`<span class="dot"></span>${l}`;
-    b.onclick=()=>{A[q.id]=v;renderQ();setTimeout(()=>{if(qi<Q.length-1){qi++;renderQ();}},180);};
-    $('qOpts').appendChild(b);
-  });
-  $('prevBtn').style.visibility=qi?'visible':'hidden';
-  $('nextBtn').disabled=A[q.id]===undefined;
-  $('nextBtn').textContent=qi===Q.length-1?'See my plan →':'Next →';
-}
-$('prevBtn').onclick=()=>{if(qi){qi--;renderQ();}};
-$('nextBtn').onclick=()=>{if(qi<Q.length-1){qi++;renderQ();}else results();};
-$('restartBtn').onclick=()=>{for(const k in A)delete A[k];qi=0;$('results').style.display='none';$('quiz').style.display='block';renderQ();};
-
-const inr=n=>'₹'+Math.round(n).toLocaleString('en-IN');
-const round500=n=>Math.max(500,Math.round(n/500)*500);
-
-const OPTIONS={
-  efund:{name:'Emergency Fund — Bank FD / Sweep FD or Liquid Fund',risk:'low',tags:['Liquidity','Safety'],
-    why:['Builds a cushion of about 6 months\' expenses before investing elsewhere','Money available within 1–2 days','Use a scheduled bank; avoid locking all of it in long FDs']},
-  ppf:{name:'PPF — Public Provident Fund',risk:'low',tags:['Govt-backed','80C','Tax-free'],
-    why:['Government-backed with tax-free interest and maturity','Qualifies for 80C deduction under the old regime','15-year lock-in suits retirement and children\'s goals; open at any post office or bank']},
-  elss:{name:'ELSS — Tax-Saving Mutual Fund (SIP)',risk:'high',tags:['80C','3-yr lock-in','Equity'],
-    why:['Shortest lock-in (3 years) among 80C options','Equity exposure for higher long-term growth potential','Start a monthly SIP to average out market ups and downs']},
-  sip:{name:'Mutual Fund SIP — Index / Flexi-cap Fund',risk:'high',tags:['Wealth','Flexible'],
-    why:['Low-cost index or flexi-cap fund for long-term wealth','No lock-in; increase SIP as income grows','Best for goals 7+ years away']},
-  hybrid:{name:'Balanced / Hybrid Mutual Fund (SIP)',risk:'med',tags:['Equity + Debt','3–7 yrs'],
-    why:['Mix of equity and debt for smoother returns','Good first step into mutual funds for cautious investors','Suited to 3–7 year goals']},
-  nsc:{name:'Post Office NSC / Time Deposit',risk:'low',tags:['Govt-backed','Fixed returns'],
-    why:['Guaranteed returns backed by the Government of India','5-year NSC qualifies for 80C under the old regime','Available at your nearest post office']},
-  rd:{name:'Post Office / Bank Recurring Deposit',risk:'low',tags:['Monthly habit','Safe'],
-    why:['Builds a disciplined monthly saving habit with small amounts','Fixed, predictable returns','Good for short-term goals like fees or festivals']},
-  mis:{name:'Post Office Monthly Income Scheme (MIS)',risk:'low',tags:['Monthly income','Govt-backed'],
-    why:['Pays interest every month into your savings account','Capital is safe and government-backed','5-year tenure; interest is taxable']},
-  scss:{name:'Senior Citizens\' Savings Scheme (SCSS)',risk:'low',tags:['60+','Quarterly income','80C'],
-    why:['Among the highest safe rates available to senior citizens','Quarterly interest payouts for regular income','Qualifies for 80C under the old regime']},
-  ssy:{name:'Sukanya Samriddhi Yojana',risk:'low',tags:['Girl child','80C','Tax-free'],
-    why:['Dedicated scheme for a daughter under 10','Tax-free interest and maturity; 80C under the old regime','Ideal for her education and marriage goals']},
-  nps:{name:'NPS — National Pension System',risk:'med',tags:['Retirement','Extra ₹50k deduction'],
-    why:['Low-cost retirement product with equity and debt mix','Extra ₹50,000 deduction under 80CCD(1B) in the old regime','Locked till 60 — keeps retirement money untouched']},
-  coop:{name:'Co-operative Bank FD (DICGC-insured only)',risk:'med',tags:['Local','Slightly higher rate'],
-    why:['Co-operative banks often offer slightly higher FD rates','Only use DICGC-insured banks and keep deposits within ₹5 lakh per bank','Avoid uninsured credit societies for your core savings']},
-  gold:{name:'Gold ETF / Gold Mutual Fund',risk:'med',tags:['Diversification'],
-    why:['Adds a hedge against inflation and rupee weakness','Better than jewellery — no making charges or storage risk','Keep to around 5–10% of investments']}
-};
-
-function results(){
-  $('bar').style.width='100%';
-  const income=A.income, ratio=A.expense;
-  let surplus=income*(1-ratio);
-  if(A.lifestyle==='comfort') surplus*=0.85;
-  if(A.lifestyle==='frugal') surplus*=1.1;
-  if(A.lifestyle==='irregular') surplus*=0.8;
-  const expenses=income*ratio;
-  const rate=Math.round(surplus/income*100);
-
-  const s={}; Object.keys(OPTIONS).forEach(k=>s[k]=0);
-  const age=A.age, risk=A.risk, hz=A.horizon, goal=A.goal;
-  const taxOld=A.regime==='old'||A.regime==='dk';
-
-  // emergency fund first
-  if(A.emergency==='none') s.efund+=100;
-  else if(A.emergency==='lt3') s.efund+=60;
-  else if(A.emergency==='3to6') s.efund+=10;
-  if(A.lifestyle==='irregular' && A.emergency!=='gt6') s.efund+=25;
-
-  // risk & horizon
-  const eq = risk==='high'?3:risk==='med'?1.5:0;
-  const hzL = hz==='long'?2:hz==='mid'?1:0;
-  s.sip += eq*12 + hzL*14 - (hz==='short'?40:0);
-  s.elss+= eq*8 + hzL*8 + (taxOld?28:-30) - (hz==='short'?30:0);
-  s.hybrid+= (risk==='med'?30:risk==='high'?10:0) + (hz==='mid'?25:hz==='long'?8:-10);
-  s.ppf += (risk==='low'?22:12) + (hz==='long'?25:-20) + (taxOld?22:0);
-  s.nsc += (risk==='low'?25:6) + (hz==='mid'?18:hz==='short'?4:0) + (taxOld?8:0);
-  s.rd  += (hz==='short'?30:0) + (surplus<10000?22:0) + (risk==='low'?10:0);
-  s.coop+= (risk!=='high'?8:0) + (hz==='short'?10:0) - 5;
-  s.gold+= (hz!=='short'?8:0) + (risk==='med'?6:0);
-  s.nps += (taxOld?12:0) + (age==='35_45'||age==='45_60'?14:age==='25_35'?6:-30);
-
-  // goals
-  ({tax:()=>{s.elss+=35;s.ppf+=25;s.nps+=18;s.nsc+=10;},
-    safe:()=>{s.ppf+=18;s.nsc+=25;s.coop+=8;s.rd+=10;s.sip-=20;},
-    income:()=>{s.mis+=45;s.scss+=20;s.coop+=10;},
-    wealth:()=>{s.sip+=35;s.elss+=10;s.gold+=8;},
-    child:()=>{s.ppf+=20;s.sip+=15;s.ssy+=10;},
-    retire:()=>{s.nps+=30;s.ppf+=20;s.sip+=10;}})[goal]();
-
-  // life stage
-  if(age==='60p'){s.scss+=70;s.mis+=25;s.sip-=25;s.elss-=15;s.nps-=40;s.ppf-=15;}
-  else s.scss=-999;
-  if(age==='u25'){s.sip+=12;s.elss+=6;}
-  if(A.dependents==='girl') s.ssy+=55; else s.ssy=-999;
-  if(goal!=='income' && age!=='60p') s.mis-=10;
-  if(A.regime==='new'||A.regime==='none'){s.elss-=10;}
-  if(surplus<5000){s.rd+=20;s.sip-=10;s.nps-=10;}
-
-  const top=Object.entries(s).sort((a,b)=>b[1]-a[1]).filter(([,v])=>v>0).slice(0,3);
-  const weights=[0.5,0.3,0.2];
-  // if emergency fund is a priority, give it more
-  if(top[0]&&top[0][0]==='efund'&&A.emergency==='none'){weights[0]=0.6;weights[1]=0.25;weights[2]=0.15;}
-
-  // summary
-  $('sumBar').innerHTML=`
-    <div class="stat"><b>${inr(income)}</b><span>Monthly income (approx.)</span></div>
-    <div class="stat"><b>${inr(expenses)}</b><span>Expenses &amp; EMIs</span></div>
-    <div class="stat"><b>${inr(surplus)}</b><span>Investable per month</span></div>
-    <div class="stat"><b>${rate}%</b><span>Savings rate</span></div>`;
-
-  let al='';
-  if(rate<15) al+=`<div class="note warn"><b>Your savings rate is low.</b> Before investing, try to cut expenses or EMIs so you can save at least 20% of income. Even ₹500/month in an RD builds the habit.</div>`;
-  if(A.dependents!=='none') al+=`<div class="note"><b>Protect your family first:</b> make sure you have a term life insurance policy and family health insurance before investing for returns.</div>`;
-  if(A.regime==='dk') al+=`<div class="note"><b>Not sure about your tax regime?</b> We\'ve assumed you might benefit from 80C options. Ravi can compare both regimes for you — it often changes which investments make sense.</div>`;
-  if(A.regime==='new') al+=`<div class="note">On the <b>new regime</b>, 80C investments don\'t reduce your tax, so we\'ve prioritised returns and flexibility over tax deductions.</div>`;
-  $('alerts').innerHTML=al;
-
-  $('recs').innerHTML=top.map(([k],i)=>{
-    const o=OPTIONS[k], amt=round500(surplus*weights[i]);
-    const rl={low:'Low risk',med:'Moderate risk',high:'Market-linked'}[o.risk];
-    return `<div class="card rec">
-      <div class="rec-head">
-        <div><div class="rec-rank">Recommendation ${i+1}</div><h3>${o.name}</h3>
-          <div class="pill-row"><span class="risk ${o.risk}">${rl}</span> ${o.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div>
-        <div class="alloc">${inr(amt)}<small>suggested / month (${Math.round(weights[i]*100)}%)</small></div>
-      </div>
-      <ul>${o.why.map(w=>`<li>${w}</li>`).join('')}</ul>
-    </div>`;
-  }).join('');
-
-  // prefill enquiry
-  const plan=top.map(([k])=>OPTIONS[k].name.split(' — ')[0]).join(', ');
-  $('discussBtn').onclick=()=>{$('f_service').value='Investment / financial guidance';$('f_msg').value=`I used the financial planner. Suggested: ${plan}. Monthly investable approx ${inr(surplus)}. I'd like to discuss this.`;};
-
-  $('quiz').style.display='none';
-  $('results').style.display='block';
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-renderQ();
+/* ============ Financial planner scenarios ============ */
+document.querySelectorAll('.scen-filter .chip').forEach(ch=>ch.addEventListener('click',()=>{
+  document.querySelectorAll('.scen-filter .chip').forEach(c=>c.classList.toggle('on',c===ch));
+  const f=ch.dataset.f;
+  document.querySelectorAll('.scen').forEach(c=>{c.style.display=(f==='all'||c.dataset.cat.split(' ').includes(f))?'':'none'});
+}));
+document.getElementById('freeConsult').addEventListener('click',()=>{
+  document.getElementById('f_service').value='Investment / financial guidance';
+  document.getElementById('f_msg').value="I'd like a free consultation about my savings and investments.";
+  if(location.hash!=='#enquiry'){try{history.pushState(null,'','#enquiry')}catch(e){}}
+  show('enquiry');
+});
+document.querySelectorAll('.scen-ask').forEach(b=>b.addEventListener('click',()=>{
+  document.getElementById('f_service').value='Investment / financial guidance';
+  document.getElementById('f_msg').value=`I'd like to discuss the "${b.dataset.title}" investment plan for my situation.`;
+  if(location.hash!=='#enquiry'){try{history.pushState(null,'','#enquiry')}catch(e){}}
+  show('enquiry');
+}));
 
 /* ============ Enquiry form ============ */
 const form=$('enqForm');

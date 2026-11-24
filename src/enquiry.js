@@ -41,7 +41,7 @@ function ackEmailHtml(name, service, site) {
         ${link('itr', 'Which ITR form should you file?', 'ITR-1 to ITR-7 explained, plus a quick form finder')}
         ${link('itr', 'Documents checklist &amp; key dates', 'What to keep ready and the usual filing deadlines')}
         ${link('services', 'How we work &amp; our tax services', 'ITR filing, tax planning, GST, TDS, notices and more')}
-        ${link('planner', 'Free savings &amp; tax planner', 'Answer 10 quick questions and get 2–3 suggestions')}
+        ${link('planner', 'Investment ideas for every stage of life', 'Sample savings plans from first job to retirement')}
         ${link('investments', 'Investment options compared', 'PPF, ELSS, Post Office schemes, FDs, mutual funds and NPS')}
       </table>
       <p style="margin:18px 0 0;font-size:13px;color:#5a6478">Official Income Tax e-Filing portal: <a href="https://www.incometax.gov.in/iec/foportal/" style="color:#1d3f9e">incometax.gov.in</a> (check your AIS and Form 26AS before filing).</p>
