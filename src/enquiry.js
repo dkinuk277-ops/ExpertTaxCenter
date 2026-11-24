@@ -5,7 +5,7 @@
 //   TO_EMAIL          (optional) inbox(es) for enquiries, comma-separated. Default: hellocompsilon@gmail.com
 //   FROM_EMAIL        (optional) sender on a Resend-verified domain, e.g. Expert Tax Center <enquiry@experttaxcenter.com>
 //                     Required for the thank-you email to clients (Resend's test sender can't email other people)
-//   CALLMEBOT_APIKEY  (secret, optional) enables WhatsApp alerts via CallMeBot
+//   CALLMEBOT_APIKEY  (secret, optional) enables a short WhatsApp alert via CallMeBot (no client contact details are sent)
 //   WHATSAPP_PHONE    (optional) number that receives WhatsApp alerts. Default: +919686776664
 //   SITE_URL          (optional) default https://www.experttaxcenter.com
 
@@ -121,7 +121,10 @@ export async function handleEnquiry(request, env, ctx) {
       html: ackEmailHtml(name, d.service, SITE),
     }, 'acknowledgement'));
   }
-  const wa = ['🔔 New enquiry — Expert Tax Center', ...fields.map(([k, v]) => `${k}: ${v ?? '—'}`), `Query: ${message.slice(0, 600)}`].join('\n');
+  // Minimal alert only: full client details stay in email (not sent through the WhatsApp gateway)
+  const firstName = name.split(/\s+/)[0];
+  const inbox = TO.split(',')[0].trim();
+  const wa = `🔔 New enquiry on Expert Tax Center from ${firstName}${d.service ? ` (${String(d.service).slice(0, 60)})` : ''}. Please check ${inbox} for full details.`;
   extras.push(sendWhatsApp(env, wa));
   const all = Promise.allSettled(extras);
   if (ctx && ctx.waitUntil) ctx.waitUntil(all); else await all;
