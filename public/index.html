@@ -699,7 +699,6 @@ details p{margin-top:10px;color:var(--ink-2);font-size:.94rem}
           <div class="big">✅</div>
           <h3>Thank you! Your enquiry has been received.</h3>
           <p class="muted">Ravi will contact you within one working day.</p>
-          <div class="btn-row" style="justify-content:center"><a class="btn btn-primary" id="waFollow" target="_blank" rel="noopener" style="background:linear-gradient(180deg,#3ee07f,#1fa855);color:#04210f">💬 Also send to Ravi on WhatsApp</a></div>
         </div>
       </div>
 
@@ -1003,9 +1002,6 @@ form.addEventListener('submit',async e=>{
       if(!r.ok){let m='';try{m=(await r.json()).error||''}catch(_){};throw new Error(m||'send failed');}
     }
   }catch(err){btn.disabled=false;btn.textContent='Submit enquiry';form.querySelectorAll('.send-err').forEach(e=>e.remove());btn.insertAdjacentHTML('afterend','<p class="err send-err" style="display:block;margin-top:10px">Sorry, '+(err.message&&err.message!=='send failed'?err.message:'something went wrong')+'. Please try WhatsApp or call instead.</p>');return;}
-
-  const txt=`Hello Ravi, I'm ${data.name} from ${data.city} (${data.client_type}). Mobile: ${data.phone}. Service: ${data.service}. ${data.message}`;
-  $('waFollow').href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(txt)}`;
   form.style.display='none';$('enqSuccess').classList.add('show');$('enqSuccess').scrollIntoView({behavior:'smooth',block:'center'});
 });
 form.querySelectorAll('input,select,textarea').forEach(el=>el.addEventListener('input',()=>el.closest('.field')?.classList.remove('bad')));

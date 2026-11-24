@@ -5,8 +5,6 @@
 //   TO_EMAIL          (optional) inbox(es) for enquiries, comma-separated. Default: hellocompsilon@gmail.com
 //   FROM_EMAIL        (optional) sender on a Resend-verified domain, e.g. Expert Tax Center <enquiry@experttaxcenter.com>
 //                     Required for the thank-you email to clients (Resend's test sender can't email other people)
-//   CALLMEBOT_APIKEY  (secret, optional) enables a short WhatsApp alert via CallMeBot (no client contact details are sent)
-//   WHATSAPP_PHONE    (optional) number that receives WhatsApp alerts. Default: +919686776664
 //   SITE_URL          (optional) default https://www.experttaxcenter.com
 
 const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -24,16 +22,6 @@ async function sendEmail(env, payload, label) {
     console.error(`Resend error (${label})`, r.status, detail); // Cloudflare > experttaxcenter > Observability > Logs
   }
   return r.ok;
-}
-
-async function sendWhatsApp(env, text) {
-  if (!env.CALLMEBOT_APIKEY) return;
-  const phone = env.WHATSAPP_PHONE || '+919686776664';
-  const url = `https://api.callmebot.com/whatsapp.php?phone=${encodeURIComponent(phone)}&text=${encodeURIComponent(text)}&apikey=${encodeURIComponent(env.CALLMEBOT_APIKEY)}`;
-  try {
-    const r = await fetch(url);
-    if (!r.ok) console.error('CallMeBot error', r.status, (await r.text()).slice(0, 300));
-  } catch (e) { console.error('CallMeBot failed', String(e)); }
 }
 
 function ackEmailHtml(name, service, site) {
@@ -110,7 +98,7 @@ export async function handleEnquiry(request, env, ctx) {
   }
   if (!ok) return json({ ok: false, error: 'could not send right now' }, 502);
 
-  // 2) Best-effort extras: thank-you email to the client + WhatsApp alert to Ravi
+  // 2) Best-effort: thank-you email to the client
   const extras = [];
   if (email && env.FROM_EMAIL) {
     extras.push(sendEmail(env, {
@@ -121,11 +109,6 @@ export async function handleEnquiry(request, env, ctx) {
       html: ackEmailHtml(name, d.service, SITE),
     }, 'acknowledgement'));
   }
-  // Minimal alert only: full client details stay in email (not sent through the WhatsApp gateway)
-  const firstName = name.split(/\s+/)[0];
-  const inbox = TO.split(',')[0].trim();
-  const wa = `🔔 New enquiry on Expert Tax Center from ${firstName}${d.service ? ` (${String(d.service).slice(0, 60)})` : ''}. Please check ${inbox} for full details.`;
-  extras.push(sendWhatsApp(env, wa));
   const all = Promise.allSettled(extras);
   if (ctx && ctx.waitUntil) ctx.waitUntil(all); else await all;
 

@@ -8,11 +8,10 @@
     "binding": "ASSETS"
   },
   "observability": { "enabled": true },
-  // Plain settings live here so deploys never wipe them. Secrets (RESEND_API_KEY, CALLMEBOT_APIKEY) stay in the Cloudflare dashboard.
+  // Plain settings live here so deploys never wipe them. Secret (RESEND_API_KEY) stay in the Cloudflare dashboard.
   "vars": {
     "TO_EMAIL": "hellocompsilon@gmail.com",
     "FROM_EMAIL": "Expert Tax Center <enquiry@experttaxcenter.com>",
-    "WHATSAPP_PHONE": "+919686776664",
     "SITE_URL": "https://www.experttaxcenter.com"
   },
   // Don't delete any extra variables added in the dashboard on deploy
